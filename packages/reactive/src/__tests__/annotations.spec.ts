@@ -131,7 +131,7 @@ test('computed annotation', () => {
   expect(compu.value).toEqual(33)
   expect(handler).toBeCalledTimes(1)
   obs.aa = 22
-  expect(handler).toBeCalledTimes(1)
+  expect(handler).toBeCalledTimes(2)
   const dispose = autorun(() => {
     compu.value
     runner1()

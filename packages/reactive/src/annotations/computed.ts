@@ -93,13 +93,19 @@ export const computed: IComputed = createAnnotation(
     }
     reaction._name = 'ComputedReaction'
     reaction._scheduler = () => {
-      reaction._dirty = true
-      runReactionsFromTargetKey({
-        target: context,
-        key: property,
-        value: store.value,
-        type: 'set',
-      })
+      if (!reaction._dirty) return
+      const currentValue = store.value
+      reaction()
+      reaction._dirty = false
+      const newValue = store.value
+      if (newValue !== currentValue) {
+        runReactionsFromTargetKey({
+          target: context,
+          key: property,
+          value: store.value,
+          type: 'set',
+        })
+      }
     }
     reaction._isComputed = true
     reaction._dirty = true
@@ -113,18 +119,18 @@ export const computed: IComputed = createAnnotation(
       if (!isUntracking()) {
         //如果允许untracked过程中收集依赖，那么永远不会存在绑定，因为_dirty已经设置为false
         if (reaction._dirty) {
-          reaction()
-          reaction._dirty = false
+          // if the value is used in batch function, it will directly execute and set dirty to false
+          reaction._scheduler()
         }
-      } else {
-        compute()
+        bindTargetKeyWithCurrentReaction({
+          target: context,
+          key: property,
+          type: 'get',
+        })
+        return store.value
       }
-      bindTargetKeyWithCurrentReaction({
-        target: context,
-        key: property,
-        type: 'get',
-      })
-      return store.value
+
+      return descriptor.get?.call(context)
     }
 
     function set(value: any) {
