@@ -5,7 +5,7 @@
  * @homepage https://github.com/kuitos/
  * @since 2018-05-22 16:39
  */
-import { Tracker, batch } from '@formily/reactive'
+import { Tracker, batch } from '@voderl-formily/reactive'
 import collectDataForVue from './collectData'
 import { Vue2 as Vue } from 'vue-demi'
 import { IObserverOptions } from '../types'
@@ -60,7 +60,7 @@ function observer(Component: any, observerOptions?: IObserverOptions): any {
             mounted = true
             nativeRenderOfVue = this._watcher.getter
             // rewrite the native render method of vue with our reactive tracker render
-            // thus if component updated by vue watcher, we could re track and collect dependencies by @formily/reactive
+            // thus if component updated by vue watcher, we could re track and collect dependencies by @voderl-formily/reactive
             this._watcher.getter = reactiveRender
           } else {
             nativeRenderOfVue.call(this, this)

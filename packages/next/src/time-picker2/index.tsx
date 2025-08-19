@@ -1,5 +1,5 @@
 import moment from 'moment'
-import { connect, mapProps, mapReadPretty } from '@formily/react'
+import { connect, mapProps, mapReadPretty } from '@voderl-formily/react'
 import { TimePicker2 as NextTimePicker2 } from '@alifd/next'
 import {
   TimePickerProps,

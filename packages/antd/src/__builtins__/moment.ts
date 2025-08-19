@@ -1,4 +1,4 @@
-import { isArr, isFn, isEmpty } from '@formily/shared'
+import { isArr, isFn, isEmpty } from '@voderl-formily/shared'
 import moment from 'moment'
 
 export const momentable = (value: any, format?: string) => {

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { render, fireEvent } from '@testing-library/vue'
 import { mount } from '@vue/test-utils'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   FormConsumer,

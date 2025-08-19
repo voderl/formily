@@ -1,4 +1,4 @@
-import { untracked, autorun, observable } from '@formily/reactive'
+import { untracked, autorun, observable } from '@voderl-formily/reactive'
 import {
   isArr,
   isStr,
@@ -8,7 +8,7 @@ import {
   isPlainObj,
   reduce,
   lazyMerge,
-} from '@formily/shared'
+} from '@voderl-formily/shared'
 import { Schema } from './schema'
 import {
   ISchema,
@@ -29,7 +29,7 @@ import {
   onFieldValidateSuccess,
   IFieldFactoryProps,
   Field,
-} from '@formily/core'
+} from '@voderl-formily/core'
 import { patchCompile, patchSchemaCompile, shallowCompile } from './compiler'
 
 const FieldEffects = {

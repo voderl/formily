@@ -1,4 +1,4 @@
-import { each } from '@formily/shared'
+import { each } from '@voderl-formily/shared'
 
 type VNodeData = Record<string, any>
 

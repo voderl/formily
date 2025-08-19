@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect, mapProps, mapReadPretty } from '@formily/react'
+import { connect, mapProps, mapReadPretty } from '@voderl-formily/react'
 import { Input } from '@alifd/next'
 import { PasswordProps } from '@alifd/next/lib/input'
 import { PasswordStrength } from './PasswordStrength'

@@ -1,5 +1,5 @@
 import { transformComponent } from '../__builtins__/shared'
-import { connect, mapProps, mapReadPretty } from '@formily/vue'
+import { connect, mapProps, mapReadPretty } from '@voderl-formily/vue'
 
 import type { InputNumber as _ElInputNumberProps } from 'element-ui'
 import { InputNumber as ElInputNumber } from 'element-ui'

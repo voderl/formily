@@ -1,5 +1,5 @@
-import { toArr, FormPathPattern } from '@formily/shared'
-import { define, observable, batch, action } from '@formily/reactive'
+import { toArr, FormPathPattern } from '@voderl-formily/shared'
+import { define, observable, batch, action } from '@voderl-formily/reactive'
 import {
   createReactions,
   createStateSetter,

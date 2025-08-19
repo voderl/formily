@@ -1,4 +1,4 @@
-import { lazyMerge } from '@formily/shared'
+import { lazyMerge } from '@voderl-formily/shared'
 import { computed, defineComponent, inject, provide, Ref } from 'vue-demi'
 import { SchemaExpressionScopeSymbol, Fragment, h } from '../shared'
 import { IExpressionScopeProps } from '../types'

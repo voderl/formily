@@ -1,4 +1,4 @@
-import { connect, mapProps, mapReadPretty } from '@formily/react'
+import { connect, mapProps, mapReadPretty } from '@voderl-formily/react'
 import { Checkbox as AntdCheckbox } from 'antd'
 import { CheckboxProps, CheckboxGroupProps } from 'antd/lib/checkbox'
 import { PreviewText } from '../preview-text'

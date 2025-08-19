@@ -1,5 +1,10 @@
 import React from 'react'
-import { connect, mapReadPretty, mapProps, ReactFC } from '@formily/react'
+import {
+  connect,
+  mapReadPretty,
+  mapProps,
+  ReactFC,
+} from '@voderl-formily/react'
 import { Select as AntdSelect } from 'antd'
 import { SelectProps } from 'antd/lib/select'
 import { PreviewText } from '../preview-text'

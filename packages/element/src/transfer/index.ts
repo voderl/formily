@@ -1,4 +1,4 @@
-import { connect, mapProps } from '@formily/vue'
+import { connect, mapProps } from '@voderl-formily/vue'
 
 import type { Transfer as ElTransferProps } from 'element-ui'
 import { Transfer as ElTransfer } from 'element-ui'

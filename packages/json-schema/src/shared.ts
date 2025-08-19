@@ -1,5 +1,12 @@
-import { isFn, each, isPlainObj, isArr, toArr, FormPath } from '@formily/shared'
-import { isObservable, untracked } from '@formily/reactive'
+import {
+  isFn,
+  each,
+  isPlainObj,
+  isArr,
+  toArr,
+  FormPath,
+} from '@voderl-formily/shared'
+import { isObservable, untracked } from '@voderl-formily/reactive'
 import { Schema } from './schema'
 import { ISchema } from './types'
 

@@ -1,13 +1,13 @@
-import { Schema, SchemaKey } from '@formily/json-schema'
-import { model } from '@formily/reactive'
-import { observer } from '@formily/reactive-vue'
+import { Schema, SchemaKey } from '@voderl-formily/json-schema'
+import { model } from '@voderl-formily/reactive'
+import { observer } from '@voderl-formily/reactive-vue'
 import {
   Fragment,
   h,
   RecursionField,
   useField,
   useFieldSchema,
-} from '@formily/vue'
+} from '@voderl-formily/vue'
 import { Badge, TabPane, Tabs } from 'element-ui'
 import { computed, defineComponent, reactive } from 'vue-demi'
 import { stylePrefix } from '../__builtins__/configs'

@@ -6,7 +6,7 @@
  */
 import React, { useRef, useLayoutEffect, useState } from 'react'
 import StickyBox from 'react-sticky-box'
-import { ReactFC } from '@formily/react'
+import { ReactFC } from '@voderl-formily/react'
 import { Space, ISpaceProps } from '../space'
 import { BaseItem, IFormItemProps } from '../form-item'
 import { usePrefixCls } from '../__builtins__'

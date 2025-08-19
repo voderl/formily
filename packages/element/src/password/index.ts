@@ -1,5 +1,5 @@
 import { Input } from '../input'
-import { connect, mapProps, mapReadPretty } from '@formily/vue'
+import { connect, mapProps, mapReadPretty } from '@voderl-formily/vue'
 import { PreviewText } from '../preview-text'
 import type { Input as ElInputProps } from 'element-ui'
 

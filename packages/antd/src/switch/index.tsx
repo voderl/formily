@@ -1,5 +1,5 @@
 import { Switch as AntdSwitch } from 'antd'
-import { connect, mapProps } from '@formily/react'
+import { connect, mapProps } from '@voderl-formily/react'
 
 export const Switch = connect(
   AntdSwitch,

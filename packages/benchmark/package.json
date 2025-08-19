@@ -1,5 +1,5 @@
 {
-  "name": "@formily/benchmark",
+  "name": "@voderl-formily/benchmark",
   "version": "2.3.7",
   "license": "MIT",
   "private": true,
@@ -40,8 +40,8 @@
     "react-is": "next"
   },
   "dependencies": {
-    "@formily/reactive": "2.3.7",
-    "@formily/reactive-react": "2.3.7",
+    "@voderl-formily/reactive": "2.3.7",
+    "@voderl-formily/reactive-react": "2.3.7",
     "react": "next",
     "react-dom": "next",
     "react-is": "next"

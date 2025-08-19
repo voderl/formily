@@ -1,6 +1,11 @@
-import { ArrayField } from '@formily/core'
-import { observer } from '@formily/reactive-vue'
-import { h, RecursionField, useField, useFieldSchema } from '@formily/vue'
+import { ArrayField } from '@voderl-formily/core'
+import { observer } from '@voderl-formily/reactive-vue'
+import {
+  h,
+  RecursionField,
+  useField,
+  useFieldSchema,
+} from '@voderl-formily/vue'
 import { Badge, TabPane, Tabs } from 'element-ui'
 import { defineComponent, ref } from 'vue-demi'
 import { stylePrefix } from '../__builtins__/configs'

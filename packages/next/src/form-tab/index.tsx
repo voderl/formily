@@ -1,7 +1,7 @@
 import React, { Fragment, useMemo } from 'react'
 import { Tab as Tabs, Badge } from '@alifd/next'
-import { model, markRaw } from '@formily/reactive'
-import { isValid } from '@formily/shared'
+import { model, markRaw } from '@voderl-formily/reactive'
+import { isValid } from '@voderl-formily/shared'
 import {
   ItemProps as TabPaneProps,
   TabProps as TabsProps,
@@ -12,8 +12,8 @@ import {
   ReactFC,
   useFieldSchema,
   RecursionField,
-} from '@formily/react'
-import { Schema, SchemaKey } from '@formily/json-schema'
+} from '@voderl-formily/react'
+import { Schema, SchemaKey } from '@voderl-formily/json-schema'
 import cls from 'classnames'
 import { usePrefixCls } from '../__builtins__'
 export interface IFormTab {

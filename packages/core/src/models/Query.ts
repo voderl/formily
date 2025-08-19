@@ -1,4 +1,4 @@
-import { FormPath, isFn, each, FormPathPattern } from '@formily/shared'
+import { FormPath, isFn, each, FormPathPattern } from '@voderl-formily/shared'
 import { buildDataPath } from '../shared/internals'
 import { GeneralField, IGeneralFieldState, IQueryProps } from '../types'
 import { Form } from './Form'

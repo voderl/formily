@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "./lib",
     "paths": {
-      "@formily/*": ["packages/*", "devtools/*"]
+      "@voderl-formily/*": ["packages/*", "devtools/*"]
     },
     "declaration": true,
     "types": []

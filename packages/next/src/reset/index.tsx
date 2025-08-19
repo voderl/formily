@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button } from '@alifd/next'
 import { ButtonProps } from '@alifd/next/lib/button'
-import { IFormFeedback, IFieldResetOptions } from '@formily/core'
-import { useParentForm } from '@formily/react'
+import { IFormFeedback, IFieldResetOptions } from '@voderl-formily/core'
+import { useParentForm } from '@voderl-formily/react'
 
 export interface IResetProps extends IFieldResetOptions, ButtonProps {
   onClick?: (e: React.MouseEvent<Element, MouseEvent>) => any

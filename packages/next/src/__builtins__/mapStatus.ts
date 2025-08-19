@@ -1,4 +1,4 @@
-import { Field } from '@formily/core'
+import { Field } from '@voderl-formily/core'
 
 export const mapStatus = (props: any, field: Field) => {
   const takeStatus = () => {

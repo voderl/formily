@@ -1,5 +1,5 @@
 import React from 'react'
-import { lazyMerge } from '@formily/shared'
+import { lazyMerge } from '@voderl-formily/shared'
 import { ExpressionScope } from './ExpressionScope'
 import { ReactFC, IRecordScopeProps } from '../types'
 import { useExpressionScope } from '../hooks'

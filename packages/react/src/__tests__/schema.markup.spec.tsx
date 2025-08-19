@@ -1,5 +1,5 @@
 import React from 'react'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   createSchemaField,

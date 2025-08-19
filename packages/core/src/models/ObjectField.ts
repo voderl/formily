@@ -1,4 +1,4 @@
-import { reaction } from '@formily/reactive'
+import { reaction } from '@voderl-formily/reactive'
 import { cleanupObjectChildren } from '../shared/internals'
 import { JSXComponent, IFieldProps, FormPathPattern } from '../types'
 import { Field } from './Field'

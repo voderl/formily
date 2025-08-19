@@ -3,17 +3,17 @@ import {
   FieldDisplayTypes,
   GeneralField,
   IVoidFieldFactoryProps,
-} from '@formily/core'
-import type { Schema } from '@formily/json-schema'
-import { observer } from '@formily/reactive-vue'
-import { isArr, isBool, isFn } from '@formily/shared'
+} from '@voderl-formily/core'
+import type { Schema } from '@voderl-formily/json-schema'
+import { observer } from '@voderl-formily/reactive-vue'
+import { isArr, isBool, isFn } from '@voderl-formily/shared'
 import {
   Fragment,
   h,
   RecursionField as _RecursionField,
   useField,
   useFieldSchema,
-} from '@formily/vue'
+} from '@voderl-formily/vue'
 import type {
   Pagination as PaginationProps,
   Table as TableProps,

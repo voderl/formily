@@ -1,4 +1,4 @@
-import { connect, mapProps } from '@formily/vue'
+import { connect, mapProps } from '@voderl-formily/vue'
 
 import type { Switch as ElSwitchProps } from 'element-ui'
 import { Switch as ElSwitch } from 'element-ui'

@@ -1,6 +1,6 @@
-import { unstable_useCompatFactory } from '@formily/reactive-react'
-import { Form } from '@formily/core'
-import { uid } from '@formily/shared'
+import { unstable_useCompatFactory } from '@voderl-formily/reactive-react'
+import { Form } from '@voderl-formily/core'
+import { uid } from '@voderl-formily/shared'
 import { useForm } from './useForm'
 
 export const useFormEffects = (effects?: (form: Form) => void) => {

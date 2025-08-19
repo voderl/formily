@@ -1,4 +1,10 @@
-import { define, observable, batch, action, observe } from '@formily/reactive'
+import {
+  define,
+  observable,
+  batch,
+  action,
+  observe,
+} from '@voderl-formily/reactive'
 import {
   FormPath,
   FormPathPattern,
@@ -9,7 +15,7 @@ import {
   isPlainObj,
   isArr,
   isObj,
-} from '@formily/shared'
+} from '@voderl-formily/shared'
 import { Heart } from './Heart'
 import { Field } from './Field'
 import {

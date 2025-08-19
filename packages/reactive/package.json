@@ -1,5 +1,5 @@
 {
-  "name": "@formily/reactive",
+  "name": "@voderl-formily/reactive",
   "version": "2.3.7",
   "license": "MIT",
   "main": "lib",

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { createPortal } from 'react-dom'
-import { observable } from '@formily/reactive'
-import { Observer } from '@formily/react'
+import { observable } from '@voderl-formily/reactive'
+import { Observer } from '@voderl-formily/react'
 import { render as reactRender, unmount as reactUnmount } from './render'
 export interface IPortalProps {
   id?: string | symbol

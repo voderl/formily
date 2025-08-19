@@ -5,10 +5,10 @@ import {
   useField,
   Schema,
   RecursionField,
-} from '@formily/react'
+} from '@voderl-formily/react'
 import cls from 'classnames'
-import { GeneralField, FieldDisplayTypes } from '@formily/core'
-import { isArr, isBool, isFn } from '@formily/shared'
+import { GeneralField, FieldDisplayTypes } from '@voderl-formily/core'
+import { isArr, isBool, isFn } from '@voderl-formily/shared'
 import { Input, Table } from 'antd'
 import { TableProps, ColumnProps } from 'antd/lib/table'
 import { SearchProps } from 'antd/lib/input'

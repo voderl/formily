@@ -1,4 +1,4 @@
-import { connect, mapReadPretty, mapProps } from '@formily/react'
+import { connect, mapReadPretty, mapProps } from '@voderl-formily/react'
 import { Input as NextInput } from '@alifd/next'
 import { InputProps, TextAreaProps } from '@alifd/next/lib/input'
 import { PreviewText } from '../preview-text'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, waitFor } from '@testing-library/react'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   ExpressionScope,

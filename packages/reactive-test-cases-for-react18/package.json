@@ -1,5 +1,5 @@
 {
-  "name": "@formily/reactive-test-cases-for-react18",
+  "name": "@voderl-formily/reactive-test-cases-for-react18",
   "version": "2.3.7",
   "license": "MIT",
   "private": true,
@@ -36,8 +36,8 @@
     "react-is": "next"
   },
   "dependencies": {
-    "@formily/reactive": "2.3.7",
-    "@formily/reactive-react": "2.3.7",
+    "@voderl-formily/reactive": "2.3.7",
+    "@voderl-formily/reactive-react": "2.3.7",
     "react": "next",
     "react-dom": "next",
     "react-is": "next"

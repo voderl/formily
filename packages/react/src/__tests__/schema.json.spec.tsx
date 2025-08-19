@@ -1,7 +1,7 @@
 import React from 'react'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import { FormProvider, createSchemaField } from '../index'
-import { Schema } from '@formily/json-schema'
+import { Schema } from '@voderl-formily/json-schema'
 import { render } from '@testing-library/react'
 
 const Input = ({ value, onChange }) => {

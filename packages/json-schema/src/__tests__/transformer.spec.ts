@@ -1,6 +1,6 @@
 import { Schema } from '../schema'
-import { createForm } from '@formily/core'
-import { isObservable } from '@formily/reactive'
+import { createForm } from '@voderl-formily/core'
+import { isObservable } from '@voderl-formily/reactive'
 import { ISchema, ISchemaTransformerOptions } from '../types'
 
 const attach = <T extends { onMount: () => void }>(target: T): T => {

@@ -10,10 +10,10 @@ import {
   FormPatternTypes,
   FieldDisplayTypes,
   FieldValidator,
-} from '@formily/core'
-import { ReactFC } from '@formily/reactive-react'
-import { ISchema, Schema, SchemaKey } from '@formily/json-schema'
-import { FormPathPattern } from '@formily/shared'
+} from '@voderl-formily/core'
+import { ReactFC } from '@voderl-formily/reactive-react'
+import { ISchema, Schema, SchemaKey } from '@voderl-formily/json-schema'
+import { FormPathPattern } from '@voderl-formily/shared'
 
 export type JSXComponent =
   | keyof JSX.IntrinsicElements

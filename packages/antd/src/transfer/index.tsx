@@ -1,6 +1,6 @@
-import { connect, mapProps } from '@formily/react'
+import { connect, mapProps } from '@voderl-formily/react'
 import { Transfer as AntdTransfer } from 'antd'
-import { isVoidField } from '@formily/core'
+import { isVoidField } from '@voderl-formily/core'
 
 const renderTitle = (item: any) => item.title
 

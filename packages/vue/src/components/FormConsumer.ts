@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue-demi'
-import { observer } from '@formily/reactive-vue'
+import { observer } from '@voderl-formily/reactive-vue'
 import { useForm } from '../hooks'
 import h from '../shared/h'
 

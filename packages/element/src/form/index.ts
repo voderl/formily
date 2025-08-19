@@ -1,5 +1,5 @@
-import { Form as FormType, IFormFeedback } from '@formily/core'
-import { FormProvider as _FormProvider, h, useForm } from '@formily/vue'
+import { Form as FormType, IFormFeedback } from '@voderl-formily/core'
+import { FormProvider as _FormProvider, h, useForm } from '@voderl-formily/vue'
 import { Component, VNode } from 'vue'
 import { defineComponent } from 'vue-demi'
 import { FormLayout, FormLayoutProps } from '../form-layout'

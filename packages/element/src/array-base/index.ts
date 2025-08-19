@@ -1,12 +1,12 @@
-import { ArrayField } from '@formily/core'
-import { clone, isValid, uid } from '@formily/shared'
+import { ArrayField } from '@voderl-formily/core'
+import { clone, isValid, uid } from '@voderl-formily/shared'
 import {
   ExpressionScope,
   Fragment,
   h,
   useField,
   useFieldSchema,
-} from '@formily/vue'
+} from '@voderl-formily/vue'
 import {
   defineComponent,
   inject,
@@ -20,7 +20,7 @@ import {
 } from 'vue-demi'
 import { stylePrefix } from '../__builtins__/configs'
 
-import type { Schema } from '@formily/json-schema'
+import type { Schema } from '@voderl-formily/json-schema'
 import type { Button as ButtonProps } from 'element-ui'
 import { Button } from 'element-ui'
 import { HandleDirective } from 'vue-slicksort'

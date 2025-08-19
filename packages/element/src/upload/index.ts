@@ -1,5 +1,5 @@
-import { Field } from '@formily/core'
-import { connect, Fragment, h, mapProps, useField } from '@formily/vue'
+import { Field } from '@voderl-formily/core'
+import { connect, Fragment, h, mapProps, useField } from '@voderl-formily/vue'
 import { defineComponent } from 'vue-demi'
 
 import type {

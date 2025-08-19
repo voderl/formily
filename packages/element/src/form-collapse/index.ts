@@ -1,5 +1,5 @@
 import { Collapse, CollapseItem, Badge } from 'element-ui'
-import { model } from '@formily/reactive'
+import { model } from '@voderl-formily/reactive'
 import type {
   Collapse as CollapseProps,
   CollapseItem as CollapseItemProps,
@@ -10,13 +10,13 @@ import {
   RecursionField,
   h,
   Fragment,
-} from '@formily/vue'
-import { observer } from '@formily/reactive-vue'
-import { Schema, SchemaKey } from '@formily/json-schema'
+} from '@voderl-formily/vue'
+import { observer } from '@voderl-formily/reactive-vue'
+import { Schema, SchemaKey } from '@voderl-formily/json-schema'
 import { composeExport, stylePrefix } from '../__builtins__'
-import { toArr } from '@formily/shared'
+import { toArr } from '@voderl-formily/shared'
 import { computed, defineComponent, PropType } from 'vue-demi'
-import { GeneralField } from '@formily/core'
+import { GeneralField } from '@voderl-formily/core'
 
 type ActiveKeys = string | number | Array<string | number>
 

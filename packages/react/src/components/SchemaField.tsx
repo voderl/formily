@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react'
-import { ISchema, Schema } from '@formily/json-schema'
+import { ISchema, Schema } from '@voderl-formily/json-schema'
 import { RecursionField } from './RecursionField'
 import { render } from '../shared/render'
 import {
@@ -16,7 +16,7 @@ import {
   ISchemaMarkupFieldProps,
   ISchemaTypeFieldProps,
 } from '../types'
-import { lazyMerge } from '@formily/shared'
+import { lazyMerge } from '@voderl-formily/shared'
 import { ExpressionScope } from './ExpressionScope'
 const env = {
   nonameId: 0,

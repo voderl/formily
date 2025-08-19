@@ -20,17 +20,17 @@ const presets = () => {
     'element-ui': 'Element',
     '@ant-design/icons': 'icons',
     '@vue/composition-api': 'VueCompositionAPI',
-    '@formily/reactive-react': 'Formily.ReactiveReact',
-    '@formily/reactive-vue': 'Formily.ReactiveVue',
-    '@formily/reactive': 'Formily.Reactive',
-    '@formily/path': 'Formily.Path',
-    '@formily/shared': 'Formily.Shared',
-    '@formily/validator': 'Formily.Validator',
-    '@formily/core': 'Formily.Core',
-    '@formily/json-schema': 'Formily.JSONSchema',
-    '@formily/react': 'Formily.React',
-    '@formily/vue': 'Formily.Vue',
-    'vue-demi': 'VueDemi'
+    '@voderl-formily/reactive-react': 'Formily.ReactiveReact',
+    '@voderl-formily/reactive-vue': 'Formily.ReactiveVue',
+    '@voderl-formily/reactive': 'Formily.Reactive',
+    '@voderl-formily/path': 'Formily.Path',
+    '@voderl-formily/shared': 'Formily.Shared',
+    '@voderl-formily/validator': 'Formily.Validator',
+    '@voderl-formily/core': 'Formily.Core',
+    '@voderl-formily/json-schema': 'Formily.JSONSchema',
+    '@voderl-formily/react': 'Formily.React',
+    '@voderl-formily/vue': 'Formily.Vue',
+    'vue-demi': 'VueDemi',
   }
   return [
     typescript({
@@ -98,10 +98,15 @@ export default (filename, targetName, ...plugins) => {
           id: filename,
         },
         globals: {
-          '@formily/json-schema': 'Formily.JSONSchema',
+          '@voderl-formily/json-schema': 'Formily.JSONSchema',
         },
       },
-      external: ['react', 'react-dom', 'react-is', '@formily/json-schema'],
+      external: [
+        'react',
+        'react-dom',
+        'react-is',
+        '@voderl-formily/json-schema',
+      ],
       plugins: [...presets(), ...plugins, createEnvPlugin('development')],
     },
     {
@@ -115,10 +120,15 @@ export default (filename, targetName, ...plugins) => {
           id: filename,
         },
         globals: {
-          '@formily/json-schema': 'Formily.JSONSchema',
+          '@voderl-formily/json-schema': 'Formily.JSONSchema',
         },
       },
-      external: ['react', 'react-dom', 'react-is', '@formily/json-schema'],
+      external: [
+        'react',
+        'react-dom',
+        'react-is',
+        '@voderl-formily/json-schema',
+      ],
       plugins: [
         ...presets(),
         terser(),

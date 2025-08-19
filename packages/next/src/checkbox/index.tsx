@@ -1,4 +1,4 @@
-import { connect, mapProps, mapReadPretty } from '@formily/react'
+import { connect, mapProps, mapReadPretty } from '@voderl-formily/react'
 import { Checkbox as NextCheckbox } from '@alifd/next'
 import {
   CheckboxProps,

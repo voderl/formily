@@ -1,6 +1,6 @@
 import { define, model, observable, autorun } from '..'
 import { observe } from '../observe'
-import { FormPath } from '@formily/shared'
+import { FormPath } from '@voderl-formily/shared'
 import { batch } from '../batch'
 
 describe('makeObservable', () => {

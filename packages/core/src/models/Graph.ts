@@ -1,5 +1,5 @@
-import { define, batch } from '@formily/reactive'
-import { each, FormPath } from '@formily/shared'
+import { define, batch } from '@voderl-formily/reactive'
+import { each, FormPath } from '@voderl-formily/shared'
 import { IFormGraph } from '../types'
 import { Form } from './Form'
 import {

@@ -1,4 +1,4 @@
-import { connect, h, mapProps, mapReadPretty } from '@formily/vue'
+import { connect, h, mapProps, mapReadPretty } from '@voderl-formily/vue'
 import type {
   Radio as ElRadioProps,
   RadioGroup as ElRadioGroupProps,
@@ -33,7 +33,7 @@ export type RadioProps = ElRadioProps
 
 const TransformElRadioGroup = transformComponent(ElRadioGroup, {
   change: 'input',
-  uselessChange:'change'
+  uselessChange: 'change',
 })
 
 const RadioGroupOption = defineComponent<RadioGroupProps>({

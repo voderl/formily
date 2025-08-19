@@ -7,15 +7,15 @@ import {
   CollapseProps,
   Empty,
 } from 'antd'
-import { ArrayField } from '@formily/core'
+import { ArrayField } from '@voderl-formily/core'
 import {
   RecursionField,
   useField,
   useFieldSchema,
   observer,
   ISchema,
-} from '@formily/react'
-import { toArr } from '@formily/shared'
+} from '@voderl-formily/react'
+import { toArr } from '@voderl-formily/shared'
 import cls from 'classnames'
 import ArrayBase, { ArrayBaseMixins, IArrayBaseProps } from '../array-base'
 import { usePrefixCls } from '../__builtins__'

@@ -1,5 +1,5 @@
-import { connect, mapReadPretty, mapProps } from '@formily/react'
-import { isVoidField } from '@formily/core'
+import { connect, mapReadPretty, mapProps } from '@voderl-formily/react'
+import { isVoidField } from '@voderl-formily/core'
 import { Select as NextSelect } from '@alifd/next'
 import { PreviewText } from '../preview-text'
 import { mapSize, mapStatus } from '../__builtins__'

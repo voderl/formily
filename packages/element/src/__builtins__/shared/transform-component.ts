@@ -1,6 +1,6 @@
 import type { Component } from 'vue'
-import { merge } from '@formily/shared'
-import { h } from '@formily/vue'
+import { merge } from '@voderl-formily/shared'
+import { h } from '@voderl-formily/vue'
 import { isVue2, defineComponent } from 'vue-demi'
 
 type ListenersTransformRules = Record<string, string>
@@ -28,7 +28,8 @@ export const transformComponent = <T extends Record<string, any>>(
             const transformListeners = transformRules
             Object.keys(transformListeners).forEach((extract) => {
               if (data.on !== undefined) {
-                data.on[transformListeners[extract]] = listeners[extract] || noop
+                data.on[transformListeners[extract]] =
+                  listeners[extract] || noop
               }
             })
           }
@@ -52,7 +53,8 @@ export const transformComponent = <T extends Record<string, any>>(
             Object.keys(listeners).forEach((extract) => {
               const event = listeners[extract]
               data[`on${event[0].toUpperCase()}${event.slice(1)}`] =
-                attrs[`on${extract[0].toUpperCase()}${extract.slice(1)}`] || noop
+                attrs[`on${extract[0].toUpperCase()}${extract.slice(1)}`] ||
+                noop
             })
           }
           if (defaultProps) {

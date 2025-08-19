@@ -1,5 +1,5 @@
 import React from 'react'
-import { ObjectField as ObjectFieldType } from '@formily/core'
+import { ObjectField as ObjectFieldType } from '@voderl-formily/core'
 import { useForm, useField } from '../hooks'
 import { useAttach } from '../hooks/useAttach'
 import { ReactiveField } from './ReactiveField'

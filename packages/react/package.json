@@ -1,5 +1,5 @@
 {
-  "name": "@formily/react",
+  "name": "@voderl-formily/react",
   "version": "2.3.7",
   "license": "MIT",
   "main": "lib",
@@ -47,12 +47,12 @@
     "dumi": "^1.1.0-rc.8"
   },
   "dependencies": {
-    "@formily/core": "2.3.7",
-    "@formily/json-schema": "2.3.7",
-    "@formily/reactive": "2.3.7",
-    "@formily/reactive-react": "2.3.7",
-    "@formily/shared": "2.3.7",
-    "@formily/validator": "2.3.7",
+    "@voderl-formily/core": "2.3.7",
+    "@voderl-formily/json-schema": "2.3.7",
+    "@voderl-formily/reactive": "2.3.7",
+    "@voderl-formily/reactive-react": "2.3.7",
+    "@voderl-formily/shared": "2.3.7",
+    "@voderl-formily/validator": "2.3.7",
     "hoist-non-react-statics": "^3.3.2"
   },
   "publishConfig": {

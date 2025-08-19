@@ -1,4 +1,4 @@
-import { isArr, isValid } from '@formily/shared'
+import { isArr, isValid } from '@voderl-formily/shared'
 import { onMounted, Ref, ref } from 'vue-demi'
 
 interface IProps {

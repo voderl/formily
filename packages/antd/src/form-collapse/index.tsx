@@ -1,17 +1,17 @@
 import React, { Fragment, useMemo } from 'react'
 import { Collapse, Badge } from 'antd'
-import { model, markRaw } from '@formily/reactive'
+import { model, markRaw } from '@voderl-formily/reactive'
 import { CollapseProps, CollapsePanelProps } from 'antd/lib/collapse'
 import {
   useField,
   observer,
   useFieldSchema,
   RecursionField,
-} from '@formily/react'
-import { Schema, SchemaKey } from '@formily/json-schema'
+} from '@voderl-formily/react'
+import { Schema, SchemaKey } from '@voderl-formily/json-schema'
 import cls from 'classnames'
 import { usePrefixCls } from '../__builtins__'
-import { toArr } from '@formily/shared'
+import { toArr } from '@voderl-formily/shared'
 
 type ActiveKeys = string | number | Array<string | number>
 

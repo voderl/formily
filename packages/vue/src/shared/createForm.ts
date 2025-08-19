@@ -1,4 +1,4 @@
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import { markRaw } from 'vue-demi'
 
 const createRawForm = (...args: Parameters<typeof createForm>) => {

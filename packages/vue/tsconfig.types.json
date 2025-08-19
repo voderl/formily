@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "./type-artefacts",
     "paths": {
-      "@formily/*": ["packages/*", "devtools/*"]
+      "@voderl-formily/*": ["packages/*", "devtools/*"]
     },
     "declaration": true,
     "sourceMap": false,

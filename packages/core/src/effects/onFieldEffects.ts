@@ -1,5 +1,5 @@
-import { FormPath, isFn, toArr } from '@formily/shared'
-import { autorun, reaction, batch } from '@formily/reactive'
+import { FormPath, isFn, toArr } from '@voderl-formily/shared'
+import { autorun, reaction, batch } from '@voderl-formily/reactive'
 import { Form } from '../models'
 import {
   LifeCycleTypes,

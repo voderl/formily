@@ -1,5 +1,5 @@
 import { Switch as NextSwitch } from '@alifd/next'
-import { connect, mapProps } from '@formily/react'
+import { connect, mapProps } from '@voderl-formily/react'
 import { mapSize, mapStatus } from '../__builtins__'
 export const Switch = connect(
   NextSwitch,

@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react'
-import { isArr, isValid } from '@formily/shared'
+import { isArr, isValid } from '@voderl-formily/shared'
 
 interface IProps {
   breakpoints?: number[]

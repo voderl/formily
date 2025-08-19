@@ -1,5 +1,5 @@
 import { transformComponent } from '../__builtins__/shared'
-import { connect, mapProps, mapReadPretty } from '@formily/vue'
+import { connect, mapProps, mapReadPretty } from '@voderl-formily/vue'
 
 import type { DatePicker as ElDatePickerProps } from 'element-ui'
 import { DatePicker as ElDatePicker } from 'element-ui'

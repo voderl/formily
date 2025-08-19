@@ -1,6 +1,6 @@
 import React, { Fragment, useMemo } from 'react'
 import { Tabs, Badge } from 'antd'
-import { model, markRaw } from '@formily/reactive'
+import { model, markRaw } from '@voderl-formily/reactive'
 import { TabPaneProps, TabsProps } from 'antd/lib/tabs'
 import {
   useField,
@@ -8,8 +8,8 @@ import {
   observer,
   useFieldSchema,
   RecursionField,
-} from '@formily/react'
-import { Schema, SchemaKey } from '@formily/json-schema'
+} from '@voderl-formily/react'
+import { Schema, SchemaKey } from '@voderl-formily/json-schema'
 import cls from 'classnames'
 import { usePrefixCls } from '../__builtins__'
 export interface IFormTab {

@@ -1,5 +1,5 @@
-import { isVoidField } from '@formily/core'
-import { connect, h, mapProps } from '@formily/vue'
+import { isVoidField } from '@voderl-formily/core'
+import { connect, h, mapProps } from '@voderl-formily/vue'
 import { Tooltip } from 'element-ui'
 import ResizeObserver from 'resize-observer-polyfill'
 import { Component } from 'vue'

@@ -12,16 +12,20 @@ import { PaginationProps } from 'antd/lib/pagination'
 import { TableProps, ColumnProps } from 'antd/lib/table'
 import { SelectProps } from 'antd/lib/select'
 import cls from 'classnames'
-import { GeneralField, FieldDisplayTypes, ArrayField } from '@formily/core'
+import {
+  GeneralField,
+  FieldDisplayTypes,
+  ArrayField,
+} from '@voderl-formily/core'
 import {
   useField,
   observer,
   useFieldSchema,
   RecursionField,
   ReactFC,
-} from '@formily/react'
-import { isArr, isBool, isFn } from '@formily/shared'
-import { Schema } from '@formily/json-schema'
+} from '@voderl-formily/react'
+import { isArr, isBool, isFn } from '@voderl-formily/shared'
+import { Schema } from '@voderl-formily/json-schema'
 import {
   usePrefixCls,
   SortableContainer,

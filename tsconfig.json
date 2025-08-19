@@ -16,7 +16,7 @@
     "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
-      "@formily/*": ["packages/*/src", "devtools/*/src"]
+      "@voderl-formily/*": ["packages/*/src", "devtools/*/src"]
     },
     "lib": ["ESNext"]
   }

@@ -1,6 +1,6 @@
-import { createForm, Form, IFormProps } from '@formily/core'
-import { toJS } from '@formily/reactive'
-import { observer } from '@formily/reactive-vue'
+import { createForm, Form, IFormProps } from '@voderl-formily/core'
+import { toJS } from '@voderl-formily/reactive'
+import { observer } from '@voderl-formily/reactive-vue'
 import {
   applyMiddleware,
   IMiddleware,
@@ -8,8 +8,8 @@ import {
   isFn,
   isNum,
   isStr,
-} from '@formily/shared'
-import { FormProvider, Fragment, h } from '@formily/vue'
+} from '@voderl-formily/shared'
+import { FormProvider, Fragment, h } from '@voderl-formily/vue'
 import type { Button as ButtonProps, Drawer as DrawerProps } from 'element-ui'
 import { Button, Drawer } from 'element-ui'
 import { t } from 'element-ui/src/locale'

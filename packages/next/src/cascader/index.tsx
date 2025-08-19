@@ -1,4 +1,4 @@
-import { connect, mapReadPretty, mapProps } from '@formily/react'
+import { connect, mapReadPretty, mapProps } from '@voderl-formily/react'
 import { CascaderSelect } from '@alifd/next'
 import { PreviewText } from '../preview-text'
 import { mapSize, mapStatus } from '../__builtins__'

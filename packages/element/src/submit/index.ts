@@ -1,6 +1,6 @@
-import { IFormFeedback } from '@formily/core'
-import { observer } from '@formily/reactive-vue'
-import { h, useParentForm } from '@formily/vue'
+import { IFormFeedback } from '@voderl-formily/core'
+import { observer } from '@voderl-formily/reactive-vue'
+import { h, useParentForm } from '@voderl-formily/vue'
 import { defineComponent } from 'vue-demi'
 
 import type { Button as ElButtonProps } from 'element-ui'

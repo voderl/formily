@@ -1,4 +1,4 @@
-import { isArr, isFn } from '@formily/shared'
+import { isArr, isFn } from '@voderl-formily/shared'
 import { useFlatOptions } from './useFlatOptions'
 
 /**

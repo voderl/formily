@@ -1,5 +1,5 @@
 import { isNoNeedCompileObject, createDataSource } from '../shared'
-import { observable } from '@formily/reactive'
+import { observable } from '@voderl-formily/reactive'
 import { Schema } from '../schema'
 
 test('isNoNeedCompileObject', () => {

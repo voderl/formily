@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { lazyMerge } from '@formily/shared'
+import { lazyMerge } from '@voderl-formily/shared'
 import { SchemaExpressionScopeContext } from '../shared'
 import { IExpressionScopeProps, ReactFC } from '../types'
 

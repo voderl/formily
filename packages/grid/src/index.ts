@@ -1,4 +1,4 @@
-import { define, observable, batch, reaction } from '@formily/reactive'
+import { define, observable, batch, reaction } from '@voderl-formily/reactive'
 import { ChildListMutationObserver } from './observer'
 import { ResizeObserver } from '@juggle/resize-observer'
 export interface IGridOptions {

@@ -1,4 +1,4 @@
-import { connect, h, mapProps, mapReadPretty } from '@formily/vue'
+import { connect, h, mapProps, mapReadPretty } from '@voderl-formily/vue'
 import type {
   Checkbox as _ElCheckboxProps,
   CheckboxGroup as ElCheckboxGroupProps,
@@ -85,7 +85,7 @@ export type CheckboxGroupProps = ElCheckboxGroupProps & {
 
 const TransformElCheckboxGroup = transformComponent(ElCheckboxGroup, {
   change: 'input',
-  uselessChange: 'change'
+  uselessChange: 'change',
 })
 
 const CheckboxGroupOption = defineComponent<CheckboxGroupProps>({

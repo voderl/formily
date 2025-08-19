@@ -1,6 +1,6 @@
-import { IFieldResetOptions } from '@formily/core'
-import { observer } from '@formily/reactive-vue'
-import { h, useParentForm } from '@formily/vue'
+import { IFieldResetOptions } from '@voderl-formily/core'
+import { observer } from '@voderl-formily/reactive-vue'
+import { h, useParentForm } from '@voderl-formily/vue'
 import { defineComponent } from 'vue-demi'
 
 import type { Button as IElButton } from 'element-ui'

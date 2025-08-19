@@ -5,7 +5,7 @@
  * 4. 吸底布局
  */
 import React, { useRef, useLayoutEffect, useState } from 'react'
-import { ReactFC } from '@formily/react'
+import { ReactFC } from '@voderl-formily/react'
 import { Space } from 'antd'
 import { SpaceProps } from 'antd/lib/space'
 import { BaseItem, IFormItemProps } from '../form-item'

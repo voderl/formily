@@ -1,4 +1,4 @@
-import { connect, mapProps } from '@formily/react'
+import { connect, mapProps } from '@voderl-formily/react'
 import { Transfer as NextTransfer } from '@alifd/next'
 
 export const Transfer = connect(

@@ -1,5 +1,5 @@
 import { inject, Ref, ref } from 'vue-demi'
-import { GeneralField } from '@formily/core'
+import { GeneralField } from '@voderl-formily/core'
 import { FieldSymbol } from '../shared/context'
 
 export const useField = <T = GeneralField>(): Ref<T> => {

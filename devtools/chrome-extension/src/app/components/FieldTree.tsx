@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { FormPath, isObj } from '@formily/shared'
+import { FormPath, isObj } from '@voderl-formily/shared'
 import { Treebeard, decorators } from 'react-treebeard'
 import * as filters from './filter'
 import SearchBox from './SearchBox'
@@ -182,7 +182,7 @@ const Header = (props) => {
           {node.name}
         </span>
         <span style={{ zIndex: 1, position: 'absolute', right: 12 }}>
-           {isObj(title) ? ((title as any).title ?? '') : title}
+          {isObj(title) ? (title as any).title ?? '' : title}
         </span>
         <div
           className={`highlight ${node.active ? 'active' : ''}`}
