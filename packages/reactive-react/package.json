@@ -1,6 +1,6 @@
 {
   "name": "@voderl-formily/reactive-react",
-  "version": "2.3.7",
+  "version": "2.3.8",
   "license": "MIT",
   "main": "lib",
   "module": "esm",
@@ -47,7 +47,7 @@
     "dumi": "^1.1.0-rc.8"
   },
   "dependencies": {
-    "@voderl-formily/reactive": "2.3.7",
+    "@voderl-formily/reactive": "2.3.8",
     "hoist-non-react-statics": "^3.3.2"
   },
   "publishConfig": {

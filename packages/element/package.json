@@ -1,6 +1,6 @@
 {
   "name": "@voderl-formily/element",
-  "version": "2.3.7",
+  "version": "2.3.8",
   "license": "MIT",
   "main": "lib",
   "module": "esm",
@@ -46,13 +46,13 @@
     "vuepress-plugin-typescript": "^0.3.1"
   },
   "dependencies": {
-    "@voderl-formily/core": "2.3.7",
-    "@voderl-formily/grid": "2.3.7",
-    "@voderl-formily/json-schema": "2.3.7",
-    "@voderl-formily/reactive": "2.3.7",
-    "@voderl-formily/reactive-vue": "2.3.7",
-    "@voderl-formily/shared": "2.3.7",
-    "@voderl-formily/vue": "2.3.7",
+    "@voderl-formily/core": "2.3.8",
+    "@voderl-formily/grid": "2.3.8",
+    "@voderl-formily/json-schema": "2.3.8",
+    "@voderl-formily/reactive": "2.3.8",
+    "@voderl-formily/reactive-vue": "2.3.8",
+    "@voderl-formily/shared": "2.3.8",
+    "@voderl-formily/vue": "2.3.8",
     "portal-vue": "^2.1.7",
     "vue-demi": ">=0.13.6",
     "vue-slicksort": "^1.2.0"

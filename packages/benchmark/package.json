@@ -1,6 +1,6 @@
 {
   "name": "@voderl-formily/benchmark",
-  "version": "2.3.7",
+  "version": "2.3.8",
   "license": "MIT",
   "private": true,
   "repository": {
@@ -40,8 +40,8 @@
     "react-is": "next"
   },
   "dependencies": {
-    "@voderl-formily/reactive": "2.3.7",
-    "@voderl-formily/reactive-react": "2.3.7",
+    "@voderl-formily/reactive": "2.3.8",
+    "@voderl-formily/reactive-react": "2.3.8",
     "react": "next",
     "react-dom": "next",
     "react-is": "next"
