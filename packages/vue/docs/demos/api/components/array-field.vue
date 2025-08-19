@@ -4,11 +4,11 @@
       <template #default="{ field }">
         <div
           v-for="(item, index) in field.value || []"
-          :key="`${item.id}-${index}`"
+          :key="field.getIndexKey(index)"
           :style="{ marginBottom: '10px' }"
         >
           <Space>
-            <Field :name="`${index}.value`" :component="[Input]" />
+            <Field :name="`${index}.value`" :component="[LoggingInput]" />
             <Button
               @click="
                 () => {
