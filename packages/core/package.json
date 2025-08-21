@@ -1,6 +1,6 @@
 {
   "name": "@voderl-formily/core",
-  "version": "2.3.8",
+  "version": "2.3.9",
   "license": "MIT",
   "main": "lib",
   "module": "esm",
@@ -32,9 +32,9 @@
     "dumi": "^1.1.0-rc.8"
   },
   "dependencies": {
-    "@voderl-formily/reactive": "2.3.8",
-    "@voderl-formily/shared": "2.3.8",
-    "@voderl-formily/validator": "2.3.8"
+    "@voderl-formily/reactive": "2.3.9",
+    "@voderl-formily/shared": "2.3.9",
+    "@voderl-formily/validator": "2.3.9"
   },
   "publishConfig": {
     "access": "public"

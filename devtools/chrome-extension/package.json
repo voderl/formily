@@ -1,6 +1,6 @@
 {
   "name": "@voderl-formily/chrome-extension",
-  "version": "2.3.8",
+  "version": "2.3.9",
   "private": true,
   "license": "MIT",
   "repository": {
@@ -21,8 +21,8 @@
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --config config/webpack.dev.ts"
   },
   "dependencies": {
-    "@voderl-formily/core": "2.3.8",
-    "@voderl-formily/shared": "2.3.8",
+    "@voderl-formily/core": "2.3.9",
+    "@voderl-formily/shared": "2.3.9",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-json-view": "^1.19.1",
