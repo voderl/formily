@@ -21,14 +21,14 @@ interface connect<T extends React.FC> {
 
 ```tsx
 import React, { useMemo } from 'react'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   FormConsumer,
   Field,
   connect,
   mapProps,
-} from '@formily/react'
+} from '@voderl-formily/react'
 import { Input, Form, Button } from 'antd'
 
 // FormItem UI组件

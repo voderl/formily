@@ -59,8 +59,8 @@ ISchema 参考 [ISchema](/api/shared/schema#ischema)
 
 ```tsx
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/react'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/react'
 import { Input, Select } from 'antd'
 
 const form = createForm()
@@ -98,8 +98,8 @@ export default () => (
 
 ```tsx
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/react'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/react'
 import { Input, Select } from 'antd'
 
 const form = createForm()
@@ -146,8 +146,8 @@ export default () => (
 
 ```tsx
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/react'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/react'
 import { Input, Tag } from 'antd'
 import { CheckCircleTwoTone } from '@ant-design/icons'
 
@@ -212,8 +212,8 @@ export default () => (
 
 ```tsx
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/react'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/react'
 import { Rate } from 'antd'
 import { DollarOutlined } from '@ant-design/icons'
 

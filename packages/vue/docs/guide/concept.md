@@ -129,8 +129,8 @@ formily 的协议驱动主要是基于标准 JSON Schema 来进行驱动渲染�
 
 <script>
   import { Input } from 'ant-design-vue'
-  import { createForm } from '@formily/core'
-  import { FormProvider, Field } from '@formily/vue'
+  import { createForm } from '@voderl-formily/core'
+  import { FormProvider, Field } from '@voderl-formily/vue'
   import 'ant-design-vue/dist/antd.css'
 
   export default {
@@ -158,8 +158,8 @@ formily 的协议驱动主要是基于标准 JSON Schema 来进行驱动渲染�
 
 <script>
   import { Input } from 'ant-design-vue'
-  import { createForm } from '@formily/core'
-  import { FormProvider, createSchemaField } from '@formily/vue'
+  import { createForm } from '@voderl-formily/core'
+  import { FormProvider, createSchemaField } from '@voderl-formily/vue'
   import 'ant-design-vue/dist/antd.css'
 
   const { SchemaField } = createSchemaField({
@@ -218,8 +218,8 @@ Markup Schema 模式主要有以下几个特点：
 
 <script>
   import { Input } from 'ant-design-vue'
-  import { createForm } from '@formily/core'
-  import { FormProvider, createSchemaField } from '@formily/vue'
+  import { createForm } from '@voderl-formily/core'
+  import { FormProvider, createSchemaField } from '@voderl-formily/vue'
   import 'ant-design-vue/dist/antd.css'
 
   const SchemaComponents = createSchemaField({

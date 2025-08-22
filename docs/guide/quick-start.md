@@ -48,9 +48,9 @@ Use ES Module import syntax to import dependencies
 
 ```ts
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, Field } from '@formily/react'
-import { FormItem, Input } from '@formily/antd'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, Field } from '@voderl-formily/react'
+import { FormItem, Input } from '@voderl-formily/antd'
 ```
 
 ## Example
@@ -60,15 +60,15 @@ import { FormItem, Input } from '@formily/antd'
  * defaultShowCode: true
  */
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, FormConsumer, Field } from '@formily/react'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, FormConsumer, Field } from '@voderl-formily/react'
 import {
   FormItem,
   FormLayout,
   Input,
   FormButtonGroup,
   Submit,
-} from '@formily/antd'
+} from '@voderl-formily/antd'
 
 const form = createForm()
 

@@ -14,9 +14,9 @@ import {
   FormGrid,
   FormButtonGroup,
   Submit,
-} from '@formily/antd'
-import { createForm } from '@formily/core'
-import { Field } from '@formily/react'
+} from '@voderl-formily/antd'
+import { createForm } from '@voderl-formily/core'
+import { Field } from '@voderl-formily/react'
 
 const form = createForm()
 

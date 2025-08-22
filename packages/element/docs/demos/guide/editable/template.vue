@@ -66,8 +66,13 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { FormProvider, Field, VoidField, ObjectField } from '@formily/vue'
+import { createForm } from '@voderl-formily/core'
+import {
+  FormProvider,
+  Field,
+  VoidField,
+  ObjectField,
+} from '@voderl-formily/vue'
 import {
   FormButtonGroup,
   FormItem,
@@ -75,7 +80,7 @@ import {
   Input,
   DatePicker,
   Editable,
-} from '@formily/element'
+} from '@voderl-formily/element'
 
 export default {
   components: {

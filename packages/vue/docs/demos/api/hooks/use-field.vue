@@ -32,9 +32,14 @@
 <script>
 import { defineComponent, h } from '@vue/composition-api'
 import { Form, Input, Button } from 'ant-design-vue'
-import { createForm, setValidateLanguage } from '@formily/core'
-import { FormProvider, FormConsumer, Field, useField } from '@formily/vue'
-import { observer } from '@formily/reactive-vue'
+import { createForm, setValidateLanguage } from '@voderl-formily/core'
+import {
+  FormProvider,
+  FormConsumer,
+  Field,
+  useField,
+} from '@voderl-formily/vue'
+import { observer } from '@voderl-formily/reactive-vue'
 import 'ant-design-vue/dist/antd.css'
 
 setValidateLanguage('en')

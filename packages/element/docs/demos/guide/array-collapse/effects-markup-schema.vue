@@ -63,15 +63,15 @@
 </template>
 
 <script>
-import { createForm, onFieldChange, onFieldReact } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/vue'
+import { createForm, onFieldChange, onFieldReact } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/vue'
 import {
   FormItem,
   FormButtonGroup,
   Submit,
   Input,
   ArrayCollapse,
-} from '@formily/element'
+} from '@voderl-formily/element'
 import { Button } from 'element-ui'
 
 const SchemaField = createSchemaField({

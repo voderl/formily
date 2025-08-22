@@ -14,8 +14,8 @@ import {
   Submit,
   Reset,
   FormButtonGroup,
-} from '@formily/antd'
-import { createSchemaField } from '@formily/react'
+} from '@voderl-formily/antd'
+import { createSchemaField } from '@voderl-formily/react'
 import { Button } from 'antd'
 
 const SchemaField = createSchemaField({
@@ -110,8 +110,8 @@ import {
   Submit,
   Reset,
   FormButtonGroup,
-} from '@formily/antd'
-import { createSchemaField } from '@formily/react'
+} from '@voderl-formily/antd'
+import { createSchemaField } from '@voderl-formily/react'
 import { Button } from 'antd'
 
 const SchemaField = createSchemaField({
@@ -206,8 +206,8 @@ import {
   Submit,
   Reset,
   FormButtonGroup,
-} from '@formily/antd'
-import { Field } from '@formily/react'
+} from '@voderl-formily/antd'
+import { Field } from '@voderl-formily/react'
 import { Button } from 'antd'
 
 export default () => {
@@ -281,7 +281,7 @@ export default () => {
 ### FormDrawer
 
 ```ts pure
-import { IFormProps, Form } from '@formily/core'
+import { IFormProps, Form } from '@voderl-formily/core'
 
 type FormDrawerRenderer =
   | React.ReactElement

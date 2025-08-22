@@ -52,7 +52,7 @@ type FormPathPattern = string | number | Array<string | number> | RegExp
 **用例**
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -66,7 +66,7 @@ console.log(target) //{a:{b:{c:'value'}}}
 对于数组路径，都会有下标，我们的下标可以用点语法，也可以用中括号
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {
   array: [],
@@ -89,7 +89,7 @@ console.log(target) //{array:[{aa:'000'},{aa:'111'}]}
 - 在 getIn 中使用解构路径，数据会被重组
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -109,7 +109,7 @@ console.log(FormPath.parse('parent.[aa,bb]').toString()) //parent.[aa,bb]
 - 路径匹配的时候不能使用分组匹配和范围匹配，比如`*(..[+1].aa,..[+2].bb)`这样的形式
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('.dd', 'aa.bb.cc').toString()) //aa.bb.dd
 console.log(FormPath.parse('..[].dd', 'aa.1.cc').toString()) //aa.1.dd
@@ -124,7 +124,7 @@ console.log(FormPath.parse('..[+10].dd', 'aa.1.cc').toString()) //aa.11.dd
 全匹配相当于是匹配所有路径，只需要用一个`*`标识即可
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('*').match('aa')) //true
 console.log(FormPath.parse('*').match('aa.bb')) //true
@@ -136,7 +136,7 @@ console.log(FormPath.parse('*').match('cc')) //true
 局部匹配相当于是匹配一个节点位置的所有路径，同样只需要用一个`*`标识即可
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.*.cc').match('aa.bb.cc')) //true
 console.log(FormPath.parse('aa.*.cc').match('aa.kk.cc')) //true
@@ -148,7 +148,7 @@ console.log(FormPath.parse('aa.*.cc').match('aa.dd.cc')) //true
 分组匹配可以匹配多个路径，同时还支持嵌套，语法：`*(pattern1,pattern2,pattern3...)`
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.*(bb,kk,dd,ee.*(oo,gg).gg).cc').match('aa.bb.cc')
@@ -172,7 +172,7 @@ console.log(
 反向匹配主要用于排除指定路径，语法：`*(!pattern1,pattern2,pattern3)`
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('*(!aa,bb,cc)').match('aa')) //false
 console.log(FormPath.parse('*(!aa,bb,cc)').match('kk')) //true
@@ -183,7 +183,7 @@ console.log(FormPath.parse('*(!aa,bb,cc)').match('kk')) //true
 扩展匹配主要用于匹配路径起始子串，语法：`pattern~`
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('test~').match('test_111')) //true
 console.log(FormPath.parse('test~').match('test_222')) //true
@@ -194,7 +194,7 @@ console.log(FormPath.parse('test~').match('test_222')) //true
 范围匹配主要用于匹配数组索引范围，语法：`*[x:y]`，x 和 y 可以为空，代表开区间匹配
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.*[1:2].bb').match('aa.1.bb')) //true
 console.log(FormPath.parse('aa.*[1:2].bb').match('aa.2.bb')) //true
@@ -209,7 +209,7 @@ console.log(FormPath.parse('aa.*[:100].bb').match('aa.1000.bb')) //false
 对于路径节点中包含关键字的，我们可以使用转义语法匹配，语法`\\`或者`[[]]`
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.\\,\\*\\{\\}\\.\\(\\).bb').match(
@@ -224,7 +224,7 @@ console.log(FormPath.parse('aa.[[,*{}.()]].bb').match('aa.[[,*{}.()]].bb')) //tr
 对于携带解构表达式的路径，我们匹配的话，直接匹配即可，无需转义
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('target.[aa,bb]').match('target.[aa,bb]')) //true
 ```
@@ -248,7 +248,7 @@ interface toString {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').toString()) //aa.bb.cc
 console.log(FormPath.parse('aa.bb.*').toString()) //aa.bb.*
@@ -272,7 +272,7 @@ interface toArray {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').toArray().join('--')) //aa-bb-cc
 console.log(FormPath.parse('aa.bb.*').toArray()) //[]
@@ -296,7 +296,7 @@ interface concat {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').concat('dd.ee.mm').toString()) //aa.bb.cc.dd.ee.mm
 console.log(
@@ -321,7 +321,7 @@ interface slice {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').slice(1).toString()) //bb.cc
 ```
@@ -343,7 +343,7 @@ interface push {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').push('dd.kk').toString()) //aa.bb.cc.dd.kk
 ```
@@ -365,7 +365,7 @@ interface pop {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').pop().toString()) //aa.bb
 ```
@@ -391,7 +391,7 @@ interface splice {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').splice(2, 1).toString()) //aa.bb
 console.log(FormPath.parse('aa.bb.cc').splice(2, 0, 'ee.gg').toString()) //aa.bb.ee.gg.cc
@@ -415,7 +415,7 @@ interface forEach {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const keys = []
 
@@ -443,7 +443,7 @@ interface map {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.bb.cc').map((key) => {
@@ -470,7 +470,7 @@ interface reduce<T> {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.bb.cc').reduce((count) => {
@@ -496,7 +496,7 @@ interface parent {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').parent().toString()) //aa.bb
 ```
@@ -518,7 +518,7 @@ interface includes {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').includes('aa.bb')) //true
 
@@ -542,7 +542,7 @@ interface transform<T> {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.1.cc').transform(
@@ -569,7 +569,7 @@ interface match {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.1.cc').match('aa.*.cc')) //true
 ```
@@ -591,7 +591,7 @@ interface matchAliasGroup {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').matchAliasGroup('aa.bb.cc', 'aa.cc')) //true
 ```
@@ -613,7 +613,7 @@ interface existIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').existIn({})) //false
 ```
@@ -635,7 +635,7 @@ interface getIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').getIn({ aa: { bb: { cc: 'value' } } })) //value
 ```
@@ -657,7 +657,7 @@ interface setIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -683,7 +683,7 @@ interface deleteIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {
   aa: {
@@ -714,7 +714,7 @@ interface ensureIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -742,7 +742,7 @@ interface match {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.match('aa.*.cc')('aa.bb.cc')) // true
 ```
@@ -768,7 +768,7 @@ interface transform<T> {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.transform(
@@ -796,7 +796,7 @@ interface parse {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.0.bb'))
 ```
@@ -816,7 +816,7 @@ interface getIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.getIn({ aa: [{ bb: 'value' }] }, 'aa.0.bb'))
 ```
@@ -836,7 +836,7 @@ interface setIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -860,7 +860,7 @@ interface deleteIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {
   aa: {
@@ -892,7 +892,7 @@ interface existIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {
   aa: {
@@ -923,7 +923,7 @@ interface ensureIn {
 #### 用例
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 

@@ -31,8 +31,12 @@ type RecursionField = React.FC<React.PropsWithChildren<IRecursionFieldProps>>
 
 ```tsx
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField, RecursionField } from '@formily/react'
+import { createForm } from '@voderl-formily/core'
+import {
+  FormProvider,
+  createSchemaField,
+  RecursionField,
+} from '@voderl-formily/react'
 import { Input } from 'antd'
 
 const form = createForm()
@@ -77,7 +81,7 @@ We can read independent schema objects from component properties and pass them t
 
 ```tsx
 import React from 'react'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   createSchemaField,
@@ -85,7 +89,7 @@ import {
   useField,
   useFieldSchema,
   observer,
-} from '@formily/react'
+} from '@voderl-formily/react'
 import { Input, Space, Button } from 'antd'
 
 const form = createForm()

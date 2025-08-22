@@ -15,7 +15,7 @@ interface markObservable<T> {
 ## 用例
 
 ```ts
-import { observable, autorun, markObservable } from '@formily/reactive'
+import { observable, autorun, markObservable } from '@voderl-formily/reactive'
 
 class A {
   property = ''

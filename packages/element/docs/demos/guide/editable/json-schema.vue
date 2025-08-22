@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/vue'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/vue'
 import {
   FormButtonGroup,
   FormItem,
@@ -17,7 +17,7 @@ import {
   Input,
   DatePicker,
   Editable,
-} from '@formily/element'
+} from '@voderl-formily/element'
 
 const { SchemaField } = createSchemaField({
   components: {

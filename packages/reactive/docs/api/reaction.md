@@ -25,7 +25,7 @@ interface reaction<T> {
 ## Example
 
 ```ts
-import { observable, reaction, batch } from '@formily/reactive'
+import { observable, reaction, batch } from '@voderl-formily/reactive'
 
 const obs = observable({
   aa: 1,

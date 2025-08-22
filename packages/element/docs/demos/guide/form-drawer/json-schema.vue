@@ -3,9 +3,14 @@
 </template>
 
 <script>
-import { FormDrawer, FormLayout, FormItem, Input } from '@formily/element'
+import {
+  FormDrawer,
+  FormLayout,
+  FormItem,
+  Input,
+} from '@voderl-formily/element'
 import { Button } from 'element-ui'
-import { createSchemaField } from '@formily/vue'
+import { createSchemaField } from '@voderl-formily/vue'
 const { SchemaField } = createSchemaField({
   components: {
     FormItem,

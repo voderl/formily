@@ -35,14 +35,18 @@
 
 <script>
 import { Form, Input } from 'ant-design-vue'
-import { createForm, isVoidField, setValidateLanguage } from '@formily/core'
+import {
+  createForm,
+  isVoidField,
+  setValidateLanguage,
+} from '@voderl-formily/core'
 import {
   FormProvider,
   FormConsumer,
   Field,
   connect,
   mapProps,
-} from '@formily/vue'
+} from '@voderl-formily/vue'
 import 'ant-design-vue/dist/antd.css'
 
 setValidateLanguage('en')

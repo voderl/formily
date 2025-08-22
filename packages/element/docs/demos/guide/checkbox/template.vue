@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { Field, ArrayField } from '@formily/vue'
-import { Form, FormItem, Checkbox, Submit } from '@formily/element'
+import { createForm } from '@voderl-formily/core'
+import { Field, ArrayField } from '@voderl-formily/vue'
+import { Form, FormItem, Checkbox, Submit } from '@voderl-formily/element'
 
 const form = createForm()
 

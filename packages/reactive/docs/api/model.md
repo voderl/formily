@@ -19,7 +19,7 @@ interface model<Target extends object> {
 ## Example
 
 ```ts
-import { model, autorun } from '@formily/reactive'
+import { model, autorun } from '@voderl-formily/reactive'
 
 const obs = model({
   aa: 1,
@@ -28,8 +28,8 @@ const obs = model({
     return this.aa + this.bb
   },
   update(aa, bb) {
-    this.aa=aa
-    this.bb=bb
+    this.aa = aa
+    this.bb = bb
   },
 })
 

@@ -21,7 +21,7 @@ interface setValidateLanguage {
 #### 用例
 
 ```ts
-import { setValidateLanguage } from '@formily/core'
+import { setValidateLanguage } from '@voderl-formily/core'
 
 setValidateLanguage('en-US')
 
@@ -45,7 +45,7 @@ interface registerValidateFormats {
 #### 用例
 
 ```ts
-import { registerValidateFormats } from '@formily/core'
+import { registerValidateFormats } from '@voderl-formily/core'
 
 registerValidateFormats({
   integer: /^[+-]?\d+$/,
@@ -73,7 +73,7 @@ interface registerValidateLocale {
 #### 用例
 
 ```ts
-import { registerValidateLocale } from '@formily/core'
+import { registerValidateLocale } from '@voderl-formily/core'
 
 registerValidateLocale({
   ja: {
@@ -99,7 +99,7 @@ interface registerValidateMessageTemplateEngine {
 #### 用例
 
 ```ts
-import { registerValidateMessageTemplateEngine } from '@formily/core'
+import { registerValidateMessageTemplateEngine } from '@voderl-formily/core'
 
 registerValidateMessageTemplateEngine((message, context) => {
   return message.replace(/\<\%\s*([\w.]+)\s*\%\>/g, (_, $0) => {
@@ -131,7 +131,7 @@ interface registerValidateRules {
 #### 用例
 
 ```ts
-import { registerValidateRules } from '@formily/core'
+import { registerValidateRules } from '@voderl-formily/core'
 
 registerValidateRules({
   custom(value) {
@@ -157,7 +157,7 @@ interface getValidateLocaleIOSCode {
 #### 用例
 
 ```ts
-import { getValidateLocaleIOSCode } from '@formily/core'
+import { getValidateLocaleIOSCode } from '@voderl-formily/core'
 
 getValidateLocaleIOSCode('en')
 

@@ -45,14 +45,14 @@ $ npm install --save @formily/core @formily/react
  * defaultShowCode: true
  */
 import React, { useMemo } from 'react'
-import { createForm, setValidateLanguage } from '@formily/core'
+import { createForm, setValidateLanguage } from '@voderl-formily/core'
 import {
   FormProvider,
   FormConsumer,
   Field,
   useField,
   observer,
-} from '@formily/react'
+} from '@voderl-formily/react'
 import { Input, Form } from 'antd'
 
 // FormItem UI component

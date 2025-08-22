@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/vue'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/vue'
 import {
   FormButtonGroup,
   Submit,
@@ -15,7 +15,7 @@ import {
   Space,
   Input,
   ArrayTabs,
-} from '@formily/element'
+} from '@voderl-formily/element'
 import { Button } from 'element-ui'
 
 const SchemaField = createSchemaField({

@@ -36,7 +36,7 @@ interface createForm {
 ## Example
 
 ```ts
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 
 const form = createForm({
   initialValues: {

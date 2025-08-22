@@ -31,14 +31,14 @@
 
 <script>
 import { Form, Input, Button } from 'ant-design-vue'
-import { createForm, setValidateLanguage } from '@formily/core'
+import { createForm, setValidateLanguage } from '@voderl-formily/core'
 import {
   FormProvider,
   FormConsumer,
   Field,
   connect,
   mapProps,
-} from '@formily/vue'
+} from '@voderl-formily/vue'
 import 'ant-design-vue/dist/antd.css'
 
 setValidateLanguage('en')

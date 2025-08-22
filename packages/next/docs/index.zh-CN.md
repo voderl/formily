@@ -37,9 +37,9 @@ $ npm install --save @formily/core @formily/react @formily/next
  * defaultShowCode: true
  */
 import React from 'react'
-import { NumberPicker, FormItem, Space } from '@formily/next'
-import { createForm } from '@formily/core'
-import { FormProvider, FormConsumer, Field } from '@formily/react'
+import { NumberPicker, FormItem, Space } from '@voderl-formily/next'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, FormConsumer, Field } from '@voderl-formily/react'
 
 const form = createForm()
 

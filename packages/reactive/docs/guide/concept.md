@@ -44,7 +44,7 @@ The requirement here is that the computed function must be a pure function. The 
 As mentioned earlier, @formily/reactive is a reactive programming model based on Proxy hijacking. Therefore, any atomic operation will trigger the execution of Reaction, which is obviously a waste of computing resources. For example, we have a function for multiple observables. Property to operate:
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 const obs = observable({})
 const handler = () => {
   obs.aa = 123
@@ -61,7 +61,7 @@ handler()
 This will execute 3 prints, autorun is executed once by default, plus the assignment of obs.aa is executed once, and the assignment of obs.bb is executed once. If there are more atomic operations, the number of executions will be more. Therefore, we recommend using batch mode To merge the updates:
 
 ```ts
-import { observable, autorun, batch } from '@formily/reactive'
+import { observable, autorun, batch } from '@voderl-formily/reactive'
 const obs = observable({})
 const handler = () => {
   obs.aa = 123
@@ -80,7 +80,7 @@ batch(() => {
 Of course, we can also use action for high-level packaging:
 
 ```ts
-import { observable, autorun, action } from '@formily/reactive'
+import { observable, autorun, action } from '@voderl-formily/reactive'
 const obs = observable({})
 const handler = action.bound(() => {
   obs.aa = 123

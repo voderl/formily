@@ -21,14 +21,14 @@ The first parameter passed in is the component to be connected, the following pa
 
 ```tsx
 import React, { useMemo } from 'react'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   FormConsumer,
   Field,
   connect,
   mapProps,
-} from '@formily/react'
+} from '@voderl-formily/react'
 import { Input, Form, Button } from 'antd'
 
 // FormItem UI component

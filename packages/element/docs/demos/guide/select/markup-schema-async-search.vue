@@ -20,10 +20,10 @@
 </template>
 
 <script>
-import { createForm, onFieldInit, onFieldReact } from '@formily/core'
-import { action, observable } from '@formily/reactive'
-import { createSchemaField, FormProvider } from '@formily/vue'
-import { FormItem, Select, Submit } from '@formily/element'
+import { createForm, onFieldInit, onFieldReact } from '@voderl-formily/core'
+import { action, observable } from '@voderl-formily/reactive'
+import { createSchemaField, FormProvider } from '@voderl-formily/vue'
+import { FormItem, Select, Submit } from '@voderl-formily/element'
 
 let timeout
 let currentValue

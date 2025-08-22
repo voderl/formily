@@ -36,8 +36,8 @@ $ npm install --save @formily/reactive
  * defaultShowCode: true
  */
 import React from 'react'
-import { observable } from '@formily/reactive'
-import { observer } from '@formily/reactive-react'
+import { observable } from '@voderl-formily/reactive'
+import { observer } from '@voderl-formily/reactive-react'
 
 const obs = observable({
   value: 'Hello world',

@@ -31,8 +31,8 @@ interface observer<T extends React.FC> {
  * defaultShowCode: true
  */
 import React from 'react'
-import { observable } from '@formily/reactive'
-import { observer } from '@formily/reactive-react'
+import { observable } from '@voderl-formily/reactive'
+import { observer } from '@voderl-formily/reactive-react'
 
 const obs = observable({
   value: 'Hello world',
@@ -84,8 +84,8 @@ type Observer = React.FC<React.PropsWithChildren<IObserverProps>>
  * defaultShowCode: true
  */
 import React from 'react'
-import { observable } from '@formily/reactive'
-import { Observer } from '@formily/reactive-react'
+import { observable } from '@voderl-formily/reactive'
+import { Observer } from '@voderl-formily/reactive-react'
 
 const obs = observable({
   value: 'Hello world',

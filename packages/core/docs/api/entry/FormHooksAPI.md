@@ -29,7 +29,7 @@ interface createEffectHook {
 
 ```tsx
 import React, { useMemo, useState } from 'react'
-import { createForm, createEffectHook } from '@formily/core'
+import { createForm, createEffectHook } from '@voderl-formily/core'
 import { ActionResponse } from './ActionResponse'
 
 const onCustomEvent = createEffectHook(
@@ -87,7 +87,11 @@ interface createEffectContext<T> {
 
 ```tsx
 import React, { useMemo, useState } from 'react'
-import { createForm, onFormSubmit, createEffectContext } from '@formily/core'
+import {
+  createForm,
+  onFormSubmit,
+  createEffectContext,
+} from '@voderl-formily/core'
 import { ActionResponse } from './ActionResponse'
 
 const { provide, consume } = createEffectContext()
@@ -143,7 +147,11 @@ interface useEffectForm {
 
 ```tsx
 import React, { useMemo, useState } from 'react'
-import { createForm, useEffectForm, createEffectContext } from '@formily/core'
+import {
+  createForm,
+  useEffectForm,
+  createEffectContext,
+} from '@voderl-formily/core'
 import { ActionResponse } from './ActionResponse'
 
 const { provide, consume } = createEffectContext()

@@ -23,7 +23,7 @@ interface deep<T extends object> {
 ### 用例
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const obs = observable({
   aa: {
@@ -55,7 +55,7 @@ interface shallow<T extends object> {
 ### 用例
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const obs = observable.shallow({
   aa: {
@@ -91,7 +91,7 @@ interface computed {
 ### 用例
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const obs = observable({
   aa: 11,
@@ -124,7 +124,7 @@ interface ref<T extends object> {
 ### 用例
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const ref = observable.ref(1)
 
@@ -152,7 +152,7 @@ interface box<T extends object> {
 ### 用例
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const box = observable.box(1)
 

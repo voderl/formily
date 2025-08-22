@@ -16,8 +16,8 @@ Issue List 专用于跟踪错误报告和功能请求。 这意味着我们不�
 
 ```tsx
 import React from 'react'
-import { createForm, onFieldMount, onFieldReact } from '@formily/core'
-import { Field, VoidField } from '@formily/react'
+import { createForm, onFieldMount, onFieldReact } from '@voderl-formily/core'
+import { Field, VoidField } from '@voderl-formily/react'
 import {
   Form,
   Input,
@@ -26,7 +26,7 @@ import {
   FormItem,
   FormButtonGroup,
   Submit,
-} from '@formily/antd'
+} from '@voderl-formily/antd'
 import semver from 'semver'
 import ReactMde from 'react-mde'
 import * as Showdown from 'showdown'

@@ -15,7 +15,7 @@ interface autorun {
 ## Example
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const obs = observable({})
 
@@ -49,7 +49,7 @@ Note: The default dependency is `[]`, that is, if the dependency is not passed, 
 ### Example
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const obs1 = observable({
   aa: 0,
@@ -99,7 +99,7 @@ Note: The default dependency is `[{}]`, that is, if the dependency is not passed
 ### Example
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const obs1 = observable({
   aa: 0,

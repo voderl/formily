@@ -17,7 +17,7 @@ interface markRaw<T> {
 ## Example
 
 ```ts
-import { observable, autorun, markRaw } from '@formily/reactive'
+import { observable, autorun, markRaw } from '@voderl-formily/reactive'
 
 class A {
   property = ''

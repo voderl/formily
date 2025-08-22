@@ -332,7 +332,7 @@ Convert the current Schema object into a Formily field model attribute, refer to
 #### Signature
 
 ```ts
-import { IFieldFactoryProps } from '@formily/core'
+import { IFieldFactoryProps } from '@voderl-formily/core'
 
 interface toFieldProps {
   (): IFieldFactoryProps
@@ -460,7 +460,7 @@ interface registerVoidComponents {
 #### Example
 
 ```ts
-import { Schema } from '@formily/react'
+import { Schema } from '@voderl-formily/react'
 
 Schema.registerVoidComponents(['card', 'tab', 'step'])
 ```
@@ -486,7 +486,7 @@ interface registerTypeDefaultComponents {
 #### Example
 
 ```ts
-import { Schema } from '@formily/react'
+import { Schema } from '@voderl-formily/react'
 
 Schema.registerTypeDefaultComponents({
   string: 'Input',
@@ -518,7 +518,7 @@ interface registerPolyfills {
 #### Example
 
 ```ts
-import { Schema } from '@formily/react'
+import { Schema } from '@voderl-formily/react'
 
 Schema.registerPolyfills('1.0', (schema) => {
   schema['x-decorator'] = 'FormItem'
@@ -551,7 +551,7 @@ interface enablePolyfills {
 #### Example
 
 ```ts
-import { Schema } from '@formily/react'
+import { Schema } from '@voderl-formily/react'
 
 Schema.enablePolyfills(['1.0'])
 ```
@@ -637,7 +637,7 @@ FormPathPattern path syntax documentation is [here](https://core.formilyjs.org/a
 #### Signature
 
 ```ts
-import { IGeneralFieldState } from '@formily/core'
+import { IGeneralFieldState } from '@voderl-formily/core'
 
 type SchemaReactionEffect =
   | 'onFieldInit'

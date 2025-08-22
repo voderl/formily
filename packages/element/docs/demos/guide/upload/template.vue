@@ -60,15 +60,15 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { ArrayField } from '@formily/vue'
+import { createForm } from '@voderl-formily/core'
+import { ArrayField } from '@voderl-formily/vue'
 import {
   Form,
   FormItem,
   Upload,
   Submit,
   FormButtonGroup,
-} from '@formily/element'
+} from '@voderl-formily/element'
 import { Button } from 'element-ui'
 
 const UploadButton = {

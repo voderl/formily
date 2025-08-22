@@ -29,8 +29,12 @@ type RecordsScope = React.FC<React.PropsWithChildren<IRecordsScopeProps>>
 
 ```tsx
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField, RecordsScope } from '@formily/react'
+import { createForm } from '@voderl-formily/core'
+import {
+  FormProvider,
+  createSchemaField,
+  RecordsScope,
+} from '@voderl-formily/react'
 import { Input } from 'antd'
 
 const form = createForm()

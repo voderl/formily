@@ -17,7 +17,7 @@ class Tracker {
 ## 用例
 
 ```ts
-import { observable, Tracker } from '@formily/reactive'
+import { observable, Tracker } from '@voderl-formily/reactive'
 
 const obs = observable({
   aa: 11,

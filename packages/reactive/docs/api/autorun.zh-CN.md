@@ -15,7 +15,7 @@ interface autorun {
 ## 用例
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const obs = observable({})
 
@@ -49,7 +49,7 @@ interface memo<T> {
 ### 用例
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const obs1 = observable({
   aa: 0,
@@ -99,7 +99,7 @@ interface effect {
 ### 用例
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 
 const obs1 = observable({
   aa: 0,

@@ -330,7 +330,7 @@ interface toJSON {
 #### 签名
 
 ```ts
-import { IFieldFactoryProps } from '@formily/core'
+import { IFieldFactoryProps } from '@voderl-formily/core'
 
 interface toFieldProps {
   (): IFieldFactoryProps
@@ -458,7 +458,7 @@ interface registerVoidComponents {
 #### 用例
 
 ```ts
-import { Schema } from '@formily/react'
+import { Schema } from '@voderl-formily/react'
 
 Schema.registerVoidComponents(['card', 'tab', 'step'])
 ```
@@ -485,7 +485,7 @@ interface registerTypeDefaultComponents {
 #### 用例
 
 ```ts
-import { Schema } from '@formily/vue'
+import { Schema } from '@voderl-formily/vue'
 
 Schema.registerTypeDefaultComponents({
   string: 'Input',
@@ -515,7 +515,7 @@ interface registerPolyfills {
 #### 用例
 
 ```ts
-import { Schema } from '@formily/react'
+import { Schema } from '@voderl-formily/react'
 
 Schema.registerPolyfills('1.0', (schema) => {
   schema['x-decorator'] = 'FormItem'
@@ -548,7 +548,7 @@ interface enablePolyfills {
 #### 用例
 
 ```ts
-import { Schema } from '@formily/vue'
+import { Schema } from '@voderl-formily/vue'
 
 Schema.enablePolyfills(['1.0'])
 ```
@@ -634,7 +634,7 @@ FormPathPattern 路径语法文档看[这里](https://core.formilyjs.org/zh-CN/a
 #### 签名
 
 ```ts
-import { IGeneralFieldState } from '@formily/core'
+import { IGeneralFieldState } from '@voderl-formily/core'
 
 type SchemaReactionEffect =
   | 'onFieldInit'

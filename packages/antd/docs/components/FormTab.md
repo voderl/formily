@@ -14,9 +14,9 @@ import {
   Input,
   FormButtonGroup,
   Submit,
-} from '@formily/antd'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/react'
+} from '@voderl-formily/antd'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/react'
 import { Button } from 'antd'
 
 const SchemaField = createSchemaField({
@@ -115,9 +115,9 @@ import {
   Input,
   FormButtonGroup,
   Submit,
-} from '@formily/antd'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/react'
+} from '@voderl-formily/antd'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/react'
 import { Button } from 'antd'
 
 const SchemaField = createSchemaField({

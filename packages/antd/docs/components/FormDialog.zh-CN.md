@@ -13,8 +13,8 @@
 
 ```tsx
 import React, { createContext, useContext } from 'react'
-import { FormDialog, FormItem, FormLayout, Input } from '@formily/antd'
-import { createSchemaField } from '@formily/react'
+import { FormDialog, FormItem, FormLayout, Input } from '@voderl-formily/antd'
+import { createSchemaField } from '@voderl-formily/react'
 import { Button } from 'antd'
 
 const SchemaField = createSchemaField({
@@ -120,8 +120,8 @@ export default () => {
 
 ```tsx
 import React from 'react'
-import { FormDialog, FormItem, FormLayout, Input } from '@formily/antd'
-import { createSchemaField } from '@formily/react'
+import { FormDialog, FormItem, FormLayout, Input } from '@voderl-formily/antd'
+import { createSchemaField } from '@voderl-formily/react'
 import { Button } from 'antd'
 
 const SchemaField = createSchemaField({
@@ -225,8 +225,8 @@ export default () => {
 
 ```tsx
 import React from 'react'
-import { FormDialog, FormItem, FormLayout, Input } from '@formily/antd'
-import { Field } from '@formily/react'
+import { FormDialog, FormItem, FormLayout, Input } from '@voderl-formily/antd'
+import { Field } from '@voderl-formily/react'
 import { Button } from 'antd'
 
 export default () => {
@@ -315,7 +315,7 @@ export default () => {
 ### FormDialog
 
 ```ts pure
-import { IFormProps, Form } from '@formily/core'
+import { IFormProps, Form } from '@voderl-formily/core'
 
 type FormDialogRenderer =
   | React.ReactElement

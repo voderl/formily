@@ -12,14 +12,14 @@
 
 <script>
 import { defineComponent, h } from '@vue/composition-api'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   ObjectField,
   VoidField,
   useParentForm,
-} from '@formily/vue'
-import { observer } from '@formily/reactive-vue'
+} from '@voderl-formily/vue'
+import { observer } from '@voderl-formily/reactive-vue'
 
 const Custom = observer(
   defineComponent({

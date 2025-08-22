@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { createSchemaField, FormProvider } from '@formily/vue'
-import { FormItem, Switch, Submit } from '@formily/element'
+import { createForm } from '@voderl-formily/core'
+import { createSchemaField, FormProvider } from '@voderl-formily/vue'
+import { FormItem, Switch, Submit } from '@voderl-formily/element'
 
 const form = createForm()
 const fields = createSchemaField({

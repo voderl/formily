@@ -15,14 +15,14 @@
 
 <script>
 import { Form, Input as AntdInput } from 'ant-design-vue'
-import { createForm, setValidateLanguage } from '@formily/core'
+import { createForm, setValidateLanguage } from '@voderl-formily/core'
 import {
   FormProvider,
   Field,
   connect,
   mapProps,
   mapReadPretty,
-} from '@formily/vue'
+} from '@voderl-formily/vue'
 import 'ant-design-vue/dist/antd.css'
 
 setValidateLanguage('en')

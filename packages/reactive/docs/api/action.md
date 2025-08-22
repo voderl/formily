@@ -17,7 +17,7 @@ interface action {
 ## Example
 
 ```ts
-import { observable, action } from '@formily/reactive'
+import { observable, action } from '@voderl-formily/reactive'
 
 const obs = observable({})
 

@@ -11,8 +11,8 @@
 
 <script>
 import { defineComponent, h } from '@vue/composition-api'
-import { createForm, onFieldReact } from '@formily/core'
-import { FormProvider, Field, useFormEffects } from '@formily/vue'
+import { createForm, onFieldReact } from '@voderl-formily/core'
+import { FormProvider, Field, useFormEffects } from '@voderl-formily/vue'
 import { Form, Input } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 

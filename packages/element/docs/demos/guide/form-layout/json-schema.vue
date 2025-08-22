@@ -5,9 +5,15 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { createSchemaField, FormProvider } from '@formily/vue'
-import { FormItem, FormLayout, Input, Select, Submit } from '@formily/element'
+import { createForm } from '@voderl-formily/core'
+import { createSchemaField, FormProvider } from '@voderl-formily/vue'
+import {
+  FormItem,
+  FormLayout,
+  Input,
+  Select,
+  Submit,
+} from '@voderl-formily/element'
 
 const schema = {
   type: 'object',

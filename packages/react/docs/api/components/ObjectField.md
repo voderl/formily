@@ -22,14 +22,17 @@ type ObjectField = React.FC<React.PropsWithChildren<IFieldFactoryProps>>
 
 ```tsx
 import React from 'react'
-import { createForm, ObjectField as ObjectFieldType } from '@formily/core'
+import {
+  createForm,
+  ObjectField as ObjectFieldType,
+} from '@voderl-formily/core'
 import {
   FormProvider,
   Field,
   ObjectField,
   useField,
   observer,
-} from '@formily/react'
+} from '@voderl-formily/react'
 import { Input, Button, Space } from 'antd'
 
 const form = createForm()
@@ -88,8 +91,8 @@ export default () => (
 
 ```tsx
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, Field, ObjectField } from '@formily/react'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, Field, ObjectField } from '@voderl-formily/react'
 import { Input, Button, Space } from 'antd'
 
 const form = createForm()

@@ -16,8 +16,8 @@ interface useForm {
 
 ```tsx
 import React from 'react'
-import { createForm } from '@formily/core'
-import { FormProvider, Field, useForm, observer } from '@formily/react'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, Field, useForm, observer } from '@voderl-formily/react'
 import { Input } from 'antd'
 
 const form = createForm()

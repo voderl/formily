@@ -22,8 +22,12 @@
 
 <script>
 import { defineComponent, h } from '@vue/composition-api'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField, useFieldSchema } from '@formily/vue'
+import { createForm } from '@voderl-formily/core'
+import {
+  FormProvider,
+  createSchemaField,
+  useFieldSchema,
+} from '@voderl-formily/vue'
 import 'ant-design-vue/dist/antd.css'
 
 const Custom = defineComponent({

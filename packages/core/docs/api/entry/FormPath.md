@@ -52,7 +52,7 @@ It is our most commonly used `a.b.c` format, which uses dot notation to divide e
 **Example**
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -66,7 +66,7 @@ console.log(target) //{a:{b:{c:'value'}}}
 For array paths, there will be subscripts. Our subscripts can use dot syntax or square brackets.
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {
   array: [],
@@ -89,7 +89,7 @@ The deconstruction expression is similar to the ES6 deconstruction grammar, exce
 - Use the deconstruction path in getIn, the data will be reorganized
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -109,7 +109,7 @@ The relative path syntax is mainly expressed in dot syntax at the head of the da
 - When path matching, group matching and range matching cannot be used, such as `*(..[+1].aa,..[+2].bb)`
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('.dd', 'aa.bb.cc').toString()) //aa.bb.dd
 console.log(FormPath.parse('..[].dd', 'aa.1.cc').toString()) //aa.1.dd
@@ -124,7 +124,7 @@ console.log(FormPath.parse('..[+10].dd', 'aa.1.cc').toString()) //aa.11.dd
 Full match is equivalent to matching all paths, only a `*` identification is required
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('*').match('aa')) //true
 console.log(FormPath.parse('*').match('aa.bb')) //true
@@ -136,7 +136,7 @@ console.log(FormPath.parse('*').match('cc')) //true
 Local matching is equivalent to matching all paths of a node position, and also only needs to use a `*` mark
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.*.cc').match('aa.bb.cc')) //true
 console.log(FormPath.parse('aa.*.cc').match('aa.kk.cc')) //true
@@ -148,7 +148,7 @@ console.log(FormPath.parse('aa.*.cc').match('aa.dd.cc')) //true
 Grouped matching can match multiple paths, and also supports nesting, syntax: `*(pattern1,pattern2,pattern3...)`
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.*(bb,kk,dd,ee.*(oo,gg).gg).cc').match('aa.bb.cc')
@@ -172,7 +172,7 @@ console.log(
 Reverse matching is mainly used to exclude the specified path, syntax: `*(!pattern1,pattern2,pattern3)`
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('*(!aa,bb,cc)').match('aa')) //false
 console.log(FormPath.parse('*(!aa,bb,cc)').match('kk')) //true
@@ -183,7 +183,7 @@ console.log(FormPath.parse('*(!aa,bb,cc)').match('kk')) //true
 Extended matching is mainly used to match the starting substring of the path, syntax: `pattern~`
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('test~').match('test_111')) //true
 console.log(FormPath.parse('test~').match('test_222')) //true
@@ -194,7 +194,7 @@ console.log(FormPath.parse('test~').match('test_222')) //true
 Range matching is mainly used to match the array index range, syntax: `*[x:y]`, x and y can be empty, representing open range matching
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.*[1:2].bb').match('aa.1.bb')) //true
 console.log(FormPath.parse('aa.*[1:2].bb').match('aa.2.bb')) //true
@@ -209,7 +209,7 @@ console.log(FormPath.parse('aa.*[:100].bb').match('aa.1000.bb')) //false
 For path nodes that contain keywords, we can use escape syntax matching, the syntax is `\\` or `[[]]`
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.\\,\\*\\{\\}\\.\\(\\).bb').match(
@@ -224,7 +224,7 @@ console.log(FormPath.parse('aa.[[,*{}.()]].bb').match('aa.[[,*{}.()]].bb')) // t
 For the path with deconstruction expression, if we match, we can directly match without escaping
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('target.[aa,bb]').match('target.[aa,bb]')) //true
 ```
@@ -248,7 +248,7 @@ interface toString {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').toString()) //aa.bb.cc
 console.log(FormPath.parse('aa.bb.*').toString()) //aa.bb.*
@@ -272,7 +272,7 @@ interface toArray {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').toArray().join('--')) //aa-bb-cc
 console.log(FormPath.parse('aa.bb.*').toArray()) //[]
@@ -296,7 +296,7 @@ interface concat {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').concat('dd.ee.mm').toString()) //aa.bb.cc.dd.ee.mm
 console.log(
@@ -321,7 +321,7 @@ interface slice {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').slice(1).toString()) //bb.cc
 ```
@@ -343,7 +343,7 @@ interface push {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').push('dd.kk').toString()) //aa.bb.cc.dd.kk
 ```
@@ -365,7 +365,7 @@ interface pop {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').pop().toString()) //aa.bb
 ```
@@ -391,7 +391,7 @@ interface splice {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').splice(2, 1).toString()) //aa.bb
 console.log(FormPath.parse('aa.bb.cc').splice(2, 0, 'ee.gg').toString()) //aa.bb.ee.gg.cc
@@ -415,7 +415,7 @@ interface forEach {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const keys = []
 
@@ -443,7 +443,7 @@ interface map {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.bb.cc').map((key) => {
@@ -470,7 +470,7 @@ interface reduce<T> {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.bb.cc').reduce((count) => {
@@ -496,7 +496,7 @@ interface parent {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').parent().toString()) //aa.bb
 ```
@@ -518,7 +518,7 @@ interface includes {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').includes('aa.bb')) //true
 
@@ -542,7 +542,7 @@ interface transform<T> {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.parse('aa.1.cc').transform(
@@ -569,7 +569,7 @@ interface match {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.1.cc').match('aa.*.cc')) //true
 ```
@@ -591,7 +591,7 @@ interface matchAliasGroup {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').matchAliasGroup('aa.bb.cc', 'aa.cc')) //true
 ```
@@ -613,7 +613,7 @@ interface existIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').existIn({})) //false
 ```
@@ -635,7 +635,7 @@ interface getIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.bb.cc').getIn({ aa: { bb: { cc: 'value' } } })) //value
 ```
@@ -657,7 +657,7 @@ interface setIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -683,7 +683,7 @@ interface deleteIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {
   aa: {
@@ -714,7 +714,7 @@ interface ensureIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -742,7 +742,7 @@ interface match {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.match('aa.*.cc')('aa.bb.cc')) // true
 ```
@@ -768,7 +768,7 @@ interface transform<T> {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(
   FormPath.transform(
@@ -796,7 +796,7 @@ interface parse {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.parse('aa.0.bb'))
 ```
@@ -816,7 +816,7 @@ interface getIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 console.log(FormPath.getIn({ aa: [{ bb: 'value' }] }, 'aa.0.bb'))
 ```
@@ -836,7 +836,7 @@ interface setIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 
@@ -860,7 +860,7 @@ interface deleteIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {
   aa: {
@@ -892,7 +892,7 @@ interface existIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {
   aa: {
@@ -923,7 +923,7 @@ interface ensureIn {
 #### Example
 
 ```ts
-import { FormPath } from '@formily/core'
+import { FormPath } from '@voderl-formily/core'
 
 const target = {}
 

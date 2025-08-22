@@ -6,9 +6,9 @@
 
 ```tsx
 import React from 'react'
-import { PreviewText, FormItem, FormLayout } from '@formily/antd'
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/react'
+import { PreviewText, FormItem, FormLayout } from '@voderl-formily/antd'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/react'
 
 const SchemaField = createSchemaField({
   components: {
@@ -110,14 +110,14 @@ import {
   FormItem,
   FormLayout,
   FormButtonGroup,
-} from '@formily/antd'
-import { createForm } from '@formily/core'
+} from '@voderl-formily/antd'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   mapReadPretty,
   connect,
   createSchemaField,
-} from '@formily/react'
+} from '@voderl-formily/react'
 import { Button, Input as AntdInput } from 'antd'
 
 const Input = connect(AntdInput, mapReadPretty(PreviewText.Input))

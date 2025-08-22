@@ -23,7 +23,7 @@ interface isForm {
 #### 用例
 
 ```ts
-import { createForm, isForm } from '@formily/core'
+import { createForm, isForm } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -47,7 +47,7 @@ interface isField {
 #### 用例
 
 ```ts
-import { createForm, isField } from '@formily/core'
+import { createForm, isField } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -73,7 +73,7 @@ interface isArrayField {
 #### 用例
 
 ```ts
-import { createForm, isArrayField } from '@formily/core'
+import { createForm, isArrayField } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -99,7 +99,7 @@ interface isObjectField {
 #### 用例
 
 ```ts
-import { createForm, isObjectField } from '@formily/core'
+import { createForm, isObjectField } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -125,7 +125,7 @@ interface isVoidField {
 #### 用例
 
 ```ts
-import { createForm, isVoidField } from '@formily/core'
+import { createForm, isVoidField } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -151,7 +151,7 @@ interface isGeneralField {
 #### 用例
 
 ```ts
-import { createForm, isGeneralField } from '@formily/core'
+import { createForm, isGeneralField } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -184,7 +184,7 @@ interface isDataField {
 #### 用例
 
 ```ts
-import { createForm, isDataField } from '@formily/core'
+import { createForm, isDataField } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -217,7 +217,7 @@ interface isFormState {
 #### 用例
 
 ```ts
-import { createForm, isFormState } from '@formily/core'
+import { createForm, isFormState } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -242,7 +242,7 @@ interface isFieldState {
 #### 用例
 
 ```ts
-import { createForm, isFieldState } from '@formily/core'
+import { createForm, isFieldState } from '@voderl-formily/core'
 
 const form = createForm()
 const field = form.createField({
@@ -270,7 +270,7 @@ interface isArrayFieldState {
 #### 用例
 
 ```ts
-import { createForm, isArrayFieldState } from '@formily/core'
+import { createForm, isArrayFieldState } from '@voderl-formily/core'
 
 const form = createForm()
 const field = form.createArrayField({
@@ -298,7 +298,7 @@ interface isObjectFieldState {
 #### 用例
 
 ```ts
-import { createForm, isObjectFieldState } from '@formily/core'
+import { createForm, isObjectFieldState } from '@voderl-formily/core'
 
 const form = createForm()
 const field = form.createObjectField({
@@ -326,7 +326,7 @@ interface isVoidFieldState {
 #### 用例
 
 ```ts
-import { createForm, isVoidFieldState } from '@formily/core'
+import { createForm, isVoidFieldState } from '@voderl-formily/core'
 
 const form = createForm()
 const field = form.createVoidField({
@@ -358,7 +358,7 @@ interface isGeneralFieldState {
 #### 用例
 
 ```ts
-import { createForm, isGeneralFieldState } from '@formily/core'
+import { createForm, isGeneralFieldState } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -395,7 +395,7 @@ interface isDataFieldState {
 #### 用例
 
 ```ts
-import { createForm, isDataFieldState } from '@formily/core'
+import { createForm, isDataFieldState } from '@voderl-formily/core'
 
 const form = createForm()
 
@@ -432,7 +432,7 @@ interface isQuery {
 #### 用例
 
 ```ts
-import { createForm, isQuery } from '@formily/core'
+import { createForm, isQuery } from '@voderl-formily/core'
 
 const form = createForm()
 console.log(isQuery(form.query('target'))) //true

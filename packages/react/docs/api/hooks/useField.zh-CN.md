@@ -20,14 +20,14 @@ interface useField {
 
 ```tsx
 import React, { useMemo } from 'react'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   FormConsumer,
   Field,
   useField,
   observer,
-} from '@formily/react'
+} from '@voderl-formily/react'
 import { Input, Form, Button } from 'antd'
 
 // FormItem UI组件

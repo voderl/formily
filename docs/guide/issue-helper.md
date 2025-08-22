@@ -16,8 +16,8 @@ it may have already been answered or even fixed in the development branch. Howev
 
 ```tsx
 import React from 'react'
-import { createForm, onFieldMount, onFieldReact } from '@formily/core'
-import { Field, VoidField } from '@formily/react'
+import { createForm, onFieldMount, onFieldReact } from '@voderl-formily/core'
+import { Field, VoidField } from '@voderl-formily/react'
 import {
   Form,
   Input,
@@ -26,7 +26,7 @@ import {
   FormItem,
   FormButtonGroup,
   Submit,
-} from '@formily/antd'
+} from '@voderl-formily/antd'
 import semver from 'semver'
 import ReactMde from 'react-mde'
 import * as Showdown from 'showdown'

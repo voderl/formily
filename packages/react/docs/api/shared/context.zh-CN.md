@@ -13,7 +13,7 @@ Form 上下文，可以获取当前 Form 实例
 #### 签名
 
 ```ts
-import { Form } from '@formily/core'
+import { Form } from '@voderl-formily/core'
 
 const FormContext = createContext<Form>(null)
 ```
@@ -27,7 +27,7 @@ const FormContext = createContext<Form>(null)
 #### 签名
 
 ```ts
-import { GeneralField } from '@formily/core'
+import { GeneralField } from '@voderl-formily/core'
 
 const FieldContext = createContext<GeneralField>(null)
 ```

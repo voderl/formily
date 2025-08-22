@@ -14,15 +14,15 @@
 import { defineComponent, h } from '@vue/composition-api'
 // or "import { defineComponent, h } from 'vue'" if using vue3
 import { Input, Button, Space } from 'ant-design-vue'
-import { createForm } from '@formily/core'
+import { createForm } from '@voderl-formily/core'
 import {
   FormProvider,
   createSchemaField,
   RecursionField,
   useField,
   useFieldSchema,
-} from '@formily/vue'
-import { observer } from '@formily/reactive-vue'
+} from '@voderl-formily/vue'
+import { observer } from '@voderl-formily/reactive-vue'
 import 'ant-design-vue/dist/antd.css'
 
 const ArrayItems = observer(

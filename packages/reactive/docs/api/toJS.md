@@ -17,7 +17,7 @@ interface toJS<T> {
 ## Example
 
 ```ts
-import { observable, autorun, toJS } from '@formily/reactive'
+import { observable, autorun, toJS } from '@voderl-formily/reactive'
 
 const obs = observable({
   aa: {

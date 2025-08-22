@@ -24,15 +24,15 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { FormProvider, createSchemaField } from '@formily/vue'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, createSchemaField } from '@voderl-formily/vue'
 import {
   FormLayout,
   Reset,
   FormButtonGroup,
   FormItem,
   Input,
-} from '@formily/element'
+} from '@voderl-formily/element'
 
 const fields = createSchemaField({
   components: {

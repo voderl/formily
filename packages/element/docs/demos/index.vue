@@ -44,9 +44,9 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { InputNumber, FormItem, Space } from '@formily/element'
-import { FormProvider, FormConsumer, Field } from '@formily/vue'
+import { createForm } from '@voderl-formily/core'
+import { InputNumber, FormItem, Space } from '@voderl-formily/element'
+import { FormProvider, FormConsumer, Field } from '@voderl-formily/vue'
 
 const form = createForm()
 

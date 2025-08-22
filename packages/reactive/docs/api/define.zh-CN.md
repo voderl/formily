@@ -31,7 +31,7 @@ interface define<Target extends object> {
 ## 用例
 
 ```ts
-import { define, observable, action, autorun } from '@formily/reactive'
+import { define, observable, action, autorun } from '@voderl-formily/reactive'
 
 class DomainModel {
   deep = { aa: 1 }

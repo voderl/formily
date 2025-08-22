@@ -14,9 +14,9 @@
 
 <script>
 import { defineComponent, h } from '@vue/composition-api'
-import { createForm } from '@formily/core'
-import { FormProvider, Field, useForm } from '@formily/vue'
-import { observer } from '@formily/reactive-vue'
+import { createForm } from '@voderl-formily/core'
+import { FormProvider, Field, useForm } from '@voderl-formily/vue'
+import { observer } from '@voderl-formily/reactive-vue'
 import { Input, Space } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 

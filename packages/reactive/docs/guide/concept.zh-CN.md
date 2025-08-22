@@ -44,7 +44,7 @@ computed 在响应式编程模型中也是属于一个比较重要的概念，�
 前面有讲到@formily/reactive 是基于 Proxy 劫持来实现的响应式编程模型，所以任何一个原子操作都会触发 Reaction 执行，这样明显是浪费了计算资源的，比如我们有一个函数内部是对多个 observable 属性进行操作的：
 
 ```ts
-import { observable, autorun } from '@formily/reactive'
+import { observable, autorun } from '@voderl-formily/reactive'
 const obs = observable({})
 const handler = () => {
   obs.aa = 123
@@ -61,7 +61,7 @@ handler()
 这样就会执行 3 次打印，autorun 默认执行一次，加上 obs.aa 赋值执行一次，obs.bb 赋值执行一次，如果原子操作更多一些，那执行次数会更多，所以，我们推荐使用 batch 模式，将更新进行合并：
 
 ```ts
-import { observable, autorun, batch } from '@formily/reactive'
+import { observable, autorun, batch } from '@voderl-formily/reactive'
 const obs = observable({})
 const handler = () => {
   obs.aa = 123
@@ -80,7 +80,7 @@ batch(() => {
 当然，我们也可以使用 action 进行高阶包装：
 
 ```ts
-import { observable, autorun, action } from '@formily/reactive'
+import { observable, autorun, action } from '@voderl-formily/reactive'
 const obs = observable({})
 const handler = action.bound(() => {
   obs.aa = 123

@@ -201,8 +201,8 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { createSchemaField, FormProvider } from '@formily/vue'
+import { createForm } from '@voderl-formily/core'
+import { createSchemaField, FormProvider } from '@voderl-formily/vue'
 import {
   FormItem,
   InputNumber,
@@ -212,7 +212,7 @@ import {
   DatePicker,
   FormLayout,
   TimePicker,
-} from '@formily/element'
+} from '@voderl-formily/element'
 
 const SuccessIcon = {
   functional: true,

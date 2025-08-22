@@ -49,7 +49,7 @@ interface observe {
 ## 用例
 
 ```ts
-import { observable, observe } from '@formily/reactive'
+import { observable, observe } from '@voderl-formily/reactive'
 
 const obs = observable({
   aa: 11,

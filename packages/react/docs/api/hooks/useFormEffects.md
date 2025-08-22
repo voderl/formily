@@ -20,8 +20,8 @@ interface useFormEffects {
 
 ```tsx
 import React from 'react'
-import { createForm, onFieldReact } from '@formily/core'
-import { FormProvider, Field, useFormEffects } from '@formily/react'
+import { createForm, onFieldReact } from '@voderl-formily/core'
+import { FormProvider, Field, useFormEffects } from '@voderl-formily/react'
 import { Input, Form } from 'antd'
 
 const form = createForm({

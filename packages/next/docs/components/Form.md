@@ -14,9 +14,9 @@ import {
   FormGrid,
   FormButtonGroup,
   Submit,
-} from '@formily/next'
-import { createForm } from '@formily/core'
-import { Field } from '@formily/react'
+} from '@voderl-formily/next'
+import { createForm } from '@voderl-formily/core'
+import { Field } from '@voderl-formily/react'
 
 const form = createForm()
 
@@ -82,9 +82,15 @@ export default () => (
 
 ```tsx
 import React from 'react'
-import { Input, Form, FormItem, FormButtonGroup, Submit } from '@formily/next'
-import { createForm } from '@formily/core'
-import { Field } from '@formily/react'
+import {
+  Input,
+  Form,
+  FormItem,
+  FormButtonGroup,
+  Submit,
+} from '@voderl-formily/next'
+import { createForm } from '@voderl-formily/core'
+import { Field } from '@voderl-formily/react'
 import { ConfigProvider } from '@alifd/next'
 import enUS from '@alifd/next/lib/locale/en-us'
 

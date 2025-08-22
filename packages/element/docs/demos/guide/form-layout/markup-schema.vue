@@ -31,9 +31,9 @@
 </template>
 
 <script>
-import { createForm } from '@formily/core'
-import { createSchemaField, FormProvider } from '@formily/vue'
-import { FormLayout, FormItem, Input, Select } from '@formily/element'
+import { createForm } from '@voderl-formily/core'
+import { createSchemaField, FormProvider } from '@voderl-formily/vue'
+import { FormLayout, FormItem, Input, Select } from '@voderl-formily/element'
 
 const fields = createSchemaField({
   components: { FormLayout, FormItem, Input, Select },
