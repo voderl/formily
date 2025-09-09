@@ -1,6 +1,6 @@
 {
   "name": "@voderl-formily/validator",
-  "version": "2.3.9",
+  "version": "2.3.10",
   "license": "MIT",
   "main": "lib",
   "module": "esm",
@@ -27,7 +27,7 @@
     "build:umd": "rollup --config"
   },
   "dependencies": {
-    "@voderl-formily/shared": "2.3.9"
+    "@voderl-formily/shared": "2.3.10"
   },
   "publishConfig": {
     "access": "public"
