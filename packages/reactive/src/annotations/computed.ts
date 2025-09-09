@@ -11,6 +11,7 @@ import {
   batchStart,
   batchEnd,
   releaseBindingReactions,
+  getReactionsFromTargetKey,
 } from '../reaction'
 
 interface IValue<T = any> {
@@ -91,9 +92,37 @@ export const computed: IComputed = createAnnotation(
         }
       }
     }
+
     reaction._name = 'ComputedReaction'
     reaction._scheduler = () => {
-      if (!reaction._dirty) return
+      if (!reaction._dirty_scheduler) return
+      reaction._dirty_scheduler = false
+
+      if (!reaction._dirty) {
+        runReactionsFromTargetKey({
+          target: context,
+          key: property,
+          value: store.value,
+          type: 'set',
+        })
+        return
+      }
+
+      const deps = getReactionsFromTargetKey(context, property)
+
+      if (!deps.length) return
+
+      if (deps.every((dep) => dep._isComputed)) {
+        // all deps are computed reactions, so should dirty the upstream computed reactions
+        runReactionsFromTargetKey({
+          target: context,
+          key: property,
+          value: store.value,
+          type: 'set',
+        })
+        return
+      }
+
       const currentValue = store.value
       reaction()
       reaction._dirty = false
@@ -107,8 +136,12 @@ export const computed: IComputed = createAnnotation(
         })
       }
     }
+
     reaction._isComputed = true
+    // is need to re calculate
     reaction._dirty = true
+    // is need to schedule to notice upstream reactions
+    reaction._dirty_scheduler = true
     reaction._context = context
     reaction._property = property
 
@@ -120,7 +153,14 @@ export const computed: IComputed = createAnnotation(
         //如果允许untracked过程中收集依赖，那么永远不会存在绑定，因为_dirty已经设置为false
         if (reaction._dirty) {
           // if the value is used in batch function, it will directly execute and set dirty to false
-          reaction._scheduler()
+          const currentValue = store.value
+          reaction()
+          reaction._dirty = false
+          const newValue = store.value
+          if (newValue === currentValue) {
+            // no need to schedule
+            reaction._dirty_scheduler = false
+          }
         }
         bindTargetKeyWithCurrentReaction({
           target: context,

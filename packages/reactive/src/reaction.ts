@@ -55,7 +55,7 @@ const addReactionsMapToReaction = (
   return bindSet
 }
 
-const getReactionsFromTargetKey = (target: any, key: PropertyKey) => {
+export const getReactionsFromTargetKey = (target: any, key: PropertyKey) => {
   const reactionsMap = RawReactionsMap.get(target)
   const reactions = []
   if (reactionsMap) {
@@ -79,6 +79,7 @@ const runReactions = (target: any, key: PropertyKey) => {
     const reaction = reactions[i]
     if (reaction._isComputed) {
       reaction._dirty = true
+      reaction._dirty_scheduler = true
       if (isScopeBatching()) {
         PendingScopeComputedReactions.add(reaction)
       } else if (isBatching()) {
