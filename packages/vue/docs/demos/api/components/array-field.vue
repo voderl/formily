@@ -8,7 +8,7 @@
           :style="{ marginBottom: '10px' }"
         >
           <Space>
-            <Field :name="`${index}.value`" :component="[LoggingInput]" />
+            <Field :name="`${index}.value`" :component="[Input]" />
             <Button
               @click="
                 () => {

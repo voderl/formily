@@ -146,3 +146,122 @@ export default () => (
   </FormProvider>
 )
 ```
+
+```tsx
+import React, { useMemo } from 'react'
+import { ArrayField as ArrayFieldType, createForm } from '@voderl-formily/core'
+import {
+  Field,
+  useField,
+  observer,
+  VoidField,
+  ArrayField,
+  FormProvider,
+} from '@voderl-formily/react'
+import { Input, Button, Space } from 'antd'
+
+const ItemComponent = observer(() => {
+  const currentField = useField()
+  console.log('renderItem')
+  const arrayField = currentField.parent as ArrayFieldType
+  return (
+    <div
+      style={{
+        display: 'flex-block',
+        marginBottom: 10,
+      }}
+    >
+      <Space>
+        <Field name={`text`} component={[Input]} />
+        <VoidField name="_buttons_">
+          {(field) => {
+            return (
+              <>
+                <Button
+                  onClick={() => {
+                    arrayField.remove(field.index)
+                  }}
+                >
+                  Remove
+                </Button>
+                <Button
+                  onClick={() => {
+                    arrayField.moveUp(field.index)
+                  }}
+                >
+                  Move Up
+                </Button>
+                <Button
+                  onClick={() => {
+                    arrayField.moveDown(field.index)
+                  }}
+                >
+                  Move Down
+                </Button>
+              </>
+            )
+          }}
+        </VoidField>
+      </Space>
+    </div>
+  )
+})
+
+const ArrayComponent = observer(() => {
+  const field = useField<ArrayFieldType>()
+  return (
+    <>
+      <div
+        style={{
+          maxHeight: '200px',
+          overflow: 'auto',
+        }}
+      >
+        {field.value?.map((item, index) => {
+          return (
+            <Field
+              key={field.getIndexKey(index)}
+              name={index}
+              component={[ItemComponent]}
+            />
+          )
+        })}
+      </div>
+
+      <Button
+        onClick={() => {
+          field.push({
+            text: '',
+          })
+        }}
+      >
+        Add
+      </Button>
+      <Button
+        onClick={() => {
+          field.push(
+            ...Array(5000)
+              .fill('')
+              .map((v, index) => ({
+                text: (index * 10).toString(),
+              }))
+          )
+        }}
+      >
+        Add 5000
+      </Button>
+    </>
+  )
+})
+
+export default function VoderlFormilyArrayField() {
+  const form = useMemo(() => {
+    return createForm()
+  }, [])
+  return (
+    <FormProvider form={form}>
+      <ArrayField name="array" component={[ArrayComponent]} />
+    </FormProvider>
+  )
+}
+```

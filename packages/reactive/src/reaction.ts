@@ -1,5 +1,6 @@
 import { isFn } from './checkers'
 import { ArraySet } from './array'
+import { ReactionsArraySet } from './reactions-array-set'
 import { IOperation, ReactionsMap, Reaction, PropertyKey } from './types'
 import {
   ReactionStack,
@@ -29,28 +30,29 @@ const addRawReactionsMap = (
     const reactions = reactionsMap.get(key)
     if (reactions) {
       reactions.add(reaction)
+      return reactions
     } else {
-      reactionsMap.set(key, new ArraySet([reaction]))
+      reactionsMap.set(key, new ReactionsArraySet([reaction]))
+      return reactionsMap.get(key)
     }
-    return reactionsMap
   } else {
     const reactionsMap: ReactionsMap = new Map([
-      [key, new ArraySet([reaction])],
+      [key, new ReactionsArraySet([reaction])],
     ])
     RawReactionsMap.set(target, reactionsMap)
-    return reactionsMap
+    return reactionsMap.get(key)
   }
 }
 
-const addReactionsMapToReaction = (
+const addReactionsSetToReaction = (
   reaction: Reaction,
-  reactionsMap: ReactionsMap
+  reactionsSet: ReactionsArraySet<Reaction>
 ) => {
   const bindSet = reaction._reactionsSet
   if (bindSet) {
-    bindSet.add(reactionsMap)
+    bindSet.add(reactionsSet)
   } else {
-    reaction._reactionsSet = new ArraySet([reactionsMap])
+    reaction._reactionsSet = new ArraySet([reactionsSet])
   }
   return bindSet
 }
@@ -62,9 +64,7 @@ export const getReactionsFromTargetKey = (target: any, key: PropertyKey) => {
     const map = reactionsMap.get(key)
     if (map) {
       map.forEach((reaction) => {
-        if (reactions.indexOf(reaction) === -1) {
-          reactions.push(reaction)
-        }
+        reactions.push(reaction)
       })
     }
   }
@@ -79,7 +79,6 @@ const runReactions = (target: any, key: PropertyKey) => {
     const reaction = reactions[i]
     if (reaction._isComputed) {
       reaction._dirty = true
-      reaction._dirty_scheduler = true
       if (isScopeBatching()) {
         PendingScopeComputedReactions.add(reaction)
       } else if (isBatching()) {
@@ -118,7 +117,7 @@ export const bindTargetKeyWithCurrentReaction = (operation: IOperation) => {
   if (isUntracking()) return
   if (current) {
     DependencyCollected.value = true
-    addReactionsMapToReaction(current, addRawReactionsMap(target, key, current))
+    addReactionsSetToReaction(current, addRawReactionsMap(target, key, current))
   }
 }
 
@@ -159,13 +158,11 @@ export const hasRunningReaction = () => {
 }
 
 export const releaseBindingReactions = (reaction: Reaction) => {
-  reaction._reactionsSet?.forEach((reactionsMap) => {
-    reactionsMap.forEach((reactions) => {
-      reactions.delete(reaction)
-    })
-  })
-  PendingReactions.delete(reaction)
-  PendingScopeReactions.delete(reaction)
+  // delete outdated reaction by _reactionId
+  if (typeof reaction._reactionId !== 'number') {
+    reaction._reactionId = 0
+  } else reaction._reactionId++
+
   delete reaction._reactionsSet
 }
 
@@ -184,6 +181,11 @@ export const suspendComputedReactions = (current: Reaction) => {
 
 export const disposeBindingReactions = (reaction: Reaction) => {
   reaction._disposed = true
+
+  reaction._reactionsSet?.forEach((reactionsSet) => {
+    reactionsSet.delete(reaction)
+  })
+
   releaseBindingReactions(reaction)
   suspendComputedReactions(reaction)
 }
