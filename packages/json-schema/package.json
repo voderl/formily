@@ -1,6 +1,6 @@
 {
   "name": "@voderl-formily/json-schema",
-  "version": "2.3.10",
+  "version": "2.3.11",
   "license": "MIT",
   "main": "lib",
   "module": "esm",
@@ -30,9 +30,9 @@
     "typescript": ">4.1.5"
   },
   "dependencies": {
-    "@voderl-formily/core": "2.3.10",
-    "@voderl-formily/reactive": "2.3.10",
-    "@voderl-formily/shared": "2.3.10"
+    "@voderl-formily/core": "2.3.11",
+    "@voderl-formily/reactive": "2.3.11",
+    "@voderl-formily/shared": "2.3.11"
   },
   "publishConfig": {
     "access": "public"

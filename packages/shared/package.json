@@ -1,6 +1,6 @@
 {
   "name": "@voderl-formily/shared",
-  "version": "2.3.10",
+  "version": "2.3.11",
   "license": "MIT",
   "main": "lib",
   "module": "esm",
@@ -31,7 +31,7 @@
     "build:umd": "rollup --config"
   },
   "dependencies": {
-    "@voderl-formily/path": "2.3.10",
+    "@voderl-formily/path": "2.3.11",
     "camel-case": "^4.1.1",
     "lower-case": "^2.0.1",
     "no-case": "^3.0.4",
